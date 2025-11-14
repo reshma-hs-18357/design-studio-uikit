@@ -1,0 +1,66 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+*.xcworkspace/xcuserdata/
+*.xcworkspace/DeviceSupport
+xcuserdata/
+project.xcworkspace/
+*.xcuserstate
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# Accio dependency manager
+Dependencies/
+.accio/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/readme.md
+
+# Bundler
+.bundle/
+
+# XCTest
+*.xccheckout
+*.moved-aside
+*.xcresult/
+
+# Archives
+*.xcarchive
+
+# Provisioning profiles
+*.mobileprovision
+*.provisionprofile
+*.ipa
+
+# App artifacts
+*.dSYM.zip
+*.dSYM
+
+# SwiftUI previews
+*.swiftdoc
+*.swiftmodule
+
+# Xcode Playground
+timeline.xctimeline
+playground.xcworkspace
+
+# Simulator data
+*/CoreSimulator/*
