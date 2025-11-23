@@ -40,21 +40,9 @@ class PageContentViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .systemBackground
-        setupNavigation()
         setupUI()
         loadPageContent()
-    }
-
-    // MARK: - Navigation
-    private func setupNavigation() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "chevron.backward"),
-            style: .plain,
-            target: self,
-            action: #selector(dismissSelf)
-        )
     }
 
     @objc private func dismissSelf() {
@@ -104,21 +92,8 @@ class PageContentViewController: UIViewController {
     }
 
     private func renderContent(root: ElementViewModel) {
-
         contentContainer.subviews.forEach { $0.removeFromSuperview() }
-
-        // Placeholder – replace with your real ElementRenderer UIView
-        let renderer = ElementRendererView(element: root, elementsMap: elementsMap)
-
-        contentContainer.addSubview(renderer)
-        renderer.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            renderer.topAnchor.constraint(equalTo: contentContainer.topAnchor),
-            renderer.bottomAnchor.constraint(equalTo: contentContainer.bottomAnchor),
-            renderer.leadingAnchor.constraint(equalTo: contentContainer.leadingAnchor),
-            renderer.trailingAnchor.constraint(equalTo: contentContainer.trailingAnchor)
-        ])
+        ElementRendererView.renderElement(parent: self.view, element: root, elementsMap: elementsMap)
     }
 
 

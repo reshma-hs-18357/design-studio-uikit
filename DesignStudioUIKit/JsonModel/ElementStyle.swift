@@ -64,12 +64,20 @@ struct ElementStyle: Codable {
     }
 
     struct Background: Codable {
+        
+        enum ContentAspectSize: String, Codable, CodingKey {
+            case fill = "fill"
+            case fit = "fit"
+            case stretch = "stretch"
+            case tile = "tile"
+        }
         struct BackgroundImage: Codable {
-            let size: String?
+            let size: ContentAspectSize?
             let src: String?
             let builderSrc: String?
             let position: String?
             
+        
             private enum CodingKeys: String, CodingKey {
                 case src = "src"
                 case builderSrc = "builder_src"

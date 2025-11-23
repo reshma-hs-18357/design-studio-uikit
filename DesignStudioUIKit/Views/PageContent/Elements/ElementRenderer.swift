@@ -7,78 +7,85 @@
 
 import UIKit
 
-class ElementRendererView: UIView {
-    
-    let element: ElementViewModel
-    let elementsMap: [String: ElementViewModel]
-    
-    init(element: ElementViewModel, elementsMap: [String: ElementViewModel]) {
-        self.element = element
-        self.elementsMap = elementsMap
-        super.init(frame: .zero)
+struct ElementRendererView {
+
+    public static func renderElement(parent : UIView,element: ElementViewModel, elementsMap: [String: ElementViewModel] )  {
         
-        let rendered = renderElement()
-        addSubview(rendered)
-        rendered.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            rendered.topAnchor.constraint(equalTo: topAnchor),
-            rendered.leadingAnchor.constraint(equalTo: leadingAnchor),
-            rendered.trailingAnchor.constraint(equalTo: trailingAnchor),
-            rendered.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func renderElement() -> UIView {
         switch element.elementType {
+            
         case .canvas:
-            return CanvasView(element: element, elementsMap: elementsMap)
+            let rendered =  CanvasView(element: element, elementsMap: elementsMap)
+            parent.addSubview(rendered)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            ConstraintSetter.fillParent(parent: parent, child: rendered)
+
             
         case .horizontalFlex:
-            return DefaultElement(element: element, elementsMap: elementsMap)
+            return
             
         case .xycoordinates:
-            return XYCoordinateView(element: element, elementsMap: elementsMap)
+            let rendered =  XYCoordinateView(element: element, elementsMap: elementsMap)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .verticalFlex:
-            return DefaultElement(element: element, elementsMap: elementsMap)
+             let rendered = VerticalView(element: element, elementsMap: elementsMap)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .heading:
-            return DefaultElement(element: element, elementsMap: elementsMap)
-            
+            let rendered = TextView(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent:parent, child: rendered, element: element)
+        
         case .image:
-            return ImageView(element: element)
+            let rendered =  ImageView(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .createPassword:
-            return DefaultElement(element: element, elementsMap: elementsMap)
+            let rendered =  CreatePassword(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .forgotPassword:
-            return DefaultElement(element: element, elementsMap: elementsMap)
+            let rendered =  ResetPassword(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .signin:
-            return DefaultElement(element: element, elementsMap: elementsMap)
+            let rendered =  SignIn(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
             
         case .signup:
-            return DefaultElement(element: element, elementsMap: elementsMap)
-            
+            let rendered =  SignUp(element: element)
+            rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
+            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+
         case .menu:
-            return DefaultElement(element: element, elementsMap: elementsMap)
-            
+            return
+
         case .menuItem:
-            return DefaultElement(element: element, elementsMap: elementsMap)
-            
+            return
+
         case .icon:
-            let v = UIView()
-            v.backgroundColor = UIColor(hex: "#008000")
-            v.translatesAutoresizingMaskIntoConstraints = false
+            let rendered = UIView()
+            rendered.backgroundColor = UIColor(hex: "#008000")
+            rendered.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                v.widthAnchor.constraint(equalToConstant: 24),
-                v.heightAnchor.constraint(equalToConstant: 24)
+                rendered.widthAnchor.constraint(equalToConstant: 24),
+                rendered.heightAnchor.constraint(equalToConstant: 24)
             ])
-            return v
+            parent.addSubview(rendered)
             
         default:
             let v = UIView()
@@ -88,31 +95,7 @@ class ElementRendererView: UIView {
                 v.widthAnchor.constraint(equalToConstant: 100),
                 v.heightAnchor.constraint(equalToConstant: 100)
             ])
-            return v
         }
-        
-    }
-    
-}
-
-
-class DefaultElement: UIView {
-    init(element: ElementViewModel, elementsMap: [String: ElementViewModel]) {
-        super.init(frame: .zero)
-        
-        let label = UILabel()
-        label.text = "Rendering root element: \(element.elementId)"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
     }
 }
 

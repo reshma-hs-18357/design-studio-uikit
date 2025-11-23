@@ -15,7 +15,7 @@ extension PageContentViewController {
             throw JsonParserError.fileNotFound
         }
         do {
-            let string = try String(contentsOf: url)
+            let string = try String(contentsOf: url, encoding: .utf8)
             guard !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
                 throw JsonParserError.emptyJsonString
             }
@@ -50,3 +50,4 @@ extension PageContentViewController {
         return root
     }
 }
+

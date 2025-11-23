@@ -1,25 +1,25 @@
 {
     "page_content" : {
         "elements": {
-          "elm_lmhz0JpduY9swI05V-EuZg": {
-            "elementId": "elm_lmhz0JpduY9swI05V-EuZg",
+          "elm_KnXSHjnbocf-hijpmFl3Sg": {
+            "elementId": "elm_KnXSHjnbocf-hijpmFl3Sg",
             "type": "image",
             "element": {
               "layout": {
                 "width": {
                   "unit": "%",
-                  "value": "40"
+                  "value": "26"
                 },
                 "constraints": {
                   "top": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "345"
+                    "value": "0"
                   },
                   "left": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "140"
+                    "value": "20"
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -34,173 +34,14 @@
                   "position": "absolute"
                 },
                 "height": {
-                  "unit": "%",
-                  "value": "40"
+                  "unit": "px",
+                  "value": "267"
                 }
               },
               "data": {
-                "src": "appbuilder/images/designstudio/static/Avtr_3.png",
-                "builder_src": "appbuilder/images/designstudio/static/Avtr_3.png",
+                "src": "appbuilder/images/designstudio/static/img1.png",
+                "builder_src": "appbuilder/images/designstudio/static/img1.png",
                 "element_name": "image_2"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset2",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "image": {
-                  "size": "fit",
-                  "position": "center"
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "image": {
-                    "size": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "color": ""
-                  },
-                  "opacity": ""
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "color": "#FCE3CF"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "image": {
-                    "size": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "color": ""
-                  },
-                  "opacity": ""
-                },
-                "opacity": "100"
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              }
-            }
-          },
-          "elm_ONoOa5lxizNnOwI_6x8hgg": {
-            "elementId": "elm_ONoOa5lxizNnOwI_6x8hgg",
-            "type": "image",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "%",
-                  "value": "30"
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "84"
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": "30"
-                  },
-                  "right": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "50"
-                  },
-                  "position": "absolute"
-                },
-                "height": {
-                  "unit": "px",
-                  "value": "450"
-                }
-              },
-              "data": {
-                "src": "appbuilder/images/designstudio/static/Avtr_2.png",
-                "builder_src": "appbuilder/images/designstudio/static/Avtr_2.png",
-                "element_name": "image_3"
               },
               "style": {
                 "corner_radius": {
@@ -261,7 +102,7 @@
                   "preset": ""
                 },
                 "background": {
-                  "color": "#FCE3CF"
+                  "color": ""
                 },
                 "active": {
                   "corner_radius": {
@@ -319,46 +160,222 @@
               }
             }
           },
-          "elm_8etHo25CQjuKS08Xa3PNeQ": {
-            "elementId": "elm_8etHo25CQjuKS08Xa3PNeQ",
-            "elements": [
-              "elm_lm0aBbSPIP20OGZIB1g-Nw",
-              "elm_lmhz0JpduY9swI05V-EuZg",
-              "elm_ONoOa5lxizNnOwI_6x8hgg"
-            ],
-            "type": "canvas",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "%",
-                  "value": "100"
-                },
-                "height": {
-                  "unit": "%",
-                  "value": "100"
-                }
-              }
-            }
-          },
-          "elm_lm0aBbSPIP20OGZIB1g-Nw": {
-            "elementId": "elm_lm0aBbSPIP20OGZIB1g-Nw",
-            "type": "image",
+          "elm_Yr_gpHgI6dd2aJPCtLOoyw": {
+            "elementId": "elm_Yr_gpHgI6dd2aJPCtLOoyw",
+            "type": "heading",
             "element": {
               "layout": {
                 "width": {
                   "unit": "px",
-                  "value": "140"
+                  "value": "339"
                 },
                 "constraints": {
                   "top": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "84"
+                    "value": "30"
                   },
                   "left": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "140"
+                    "value": "378"
+                  },
+                  "bottom": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "100"
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": "280"
+                }
+              },
+              "data": {
+                "element_name": "heading_1"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "color": "#000000",
+                  "thickness": "1"
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "10"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": ""
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Lato',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "                  \u003Cspan style=\"color:rgb(245, 245, 247)\"\u003EViews are the fundamental building blocks of your app’s user interface, and the\u003Cspan\u003E&nbsp;\u003C/span\u003E\u003C/span\u003EUIView\u003Cspan style=\"color:rgb(245, 245, 247)\"\u003E\u003Cspan\u003E&nbsp;\u003C/span\u003Eclass defines the behaviors that are common to all views. A view object renders content within its bounds rectangle, and handles any interactions with that content. The\u003Cspan\u003E&nbsp;\u003C/span\u003E\u003C/span\u003EUIView\u003Cspan style=\"color:rgb(245, 245, 247)\"\u003E\u003Cspan\u003E&nbsp;\u003C/span\u003Eclass is a concrete class that you can instantiate and use to display a fixed background color. You can also subclass it to draw more sophisticated content. To display labels, images, buttons, and other interface elements commonly found in apps, use the view subclasses that the UIKit framework provides rather than trying to define your own.&nbsp;\u003Cspan style=\"margin:0px; padding:0px; font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(250, 205, 168); color:rgb(245, 245, 247)\"\u003EViews are the fundamental building blocks of your app’s user interface, and the\u003Cspan style=\"margin:0px; padding:0px\"\u003E&nbsp;\u003C/span\u003E\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(250, 205, 168); display:inline !important; float:none\"\u003EUIView\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(250, 205, 168); color:rgb(245, 245, 247)\"\u003E\u003Cspan style=\"margin:0px; padding:0px\"\u003E&nbsp;\u003C/span\u003Eclass defines the behaviors that are common to all views. A view object renders content within its bounds rectangle, and handles any interactions with that content. The\u003Cspan style=\"margin:0px; padding:0px\"\u003E&nbsp;\u003C/span\u003E\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(250, 205, 168); display:inline !important; float:none\"\u003EUIView\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(250, 205, 168); color:rgb(245, 245, 247)\"\u003E\u003Cspan style=\"margin:0px; padding:0px\"\u003E&nbsp;\u003C/span\u003Eclass is a concrete class that you can instantiate and use to display a fixed background color. You can also subclass it to draw more sophisticated content. To display labels, images, buttons, and other interface elements commonly found in apps, use the view subclasses that the UIKit framework provides rather than trying to define your own.\u003C/span\u003E\u003C/span\u003E     "
+            }
+          },
+          "elm_eMx9JEW0UFXd2V9VFFve4g": {
+            "elementId": "elm_eMx9JEW0UFXd2V9VFFve4g",
+            "type": "image",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "px",
+                  "value": "222"
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "313"
+                  },
+                  "left": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "27"
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -374,12 +391,12 @@
                 },
                 "height": {
                   "unit": "px",
-                  "value": "140"
+                  "value": "285"
                 }
               },
               "data": {
-                "src": "appbuilder/images/designstudio/static/Avtr_3.png",
-                "builder_src": "appbuilder/images/designstudio/static/Avtr_3.png",
+                "src": "appbuilder/images/designstudio/static/hero_2.png",
+                "builder_src": "appbuilder/images/designstudio/static/hero_2.png",
                 "element_name": "image_1"
               },
               "style": {
@@ -397,7 +414,7 @@
                 "padding": {
                   "unit": "px",
                   "is_even": true,
-                  "value": "10"
+                  "value": "0"
                 },
                 "hover": {
                   "corner_radius": {
@@ -441,7 +458,7 @@
                   "preset": ""
                 },
                 "background": {
-                  "color": "#FCE3CF"
+                  "color": ""
                 },
                 "active": {
                   "corner_radius": {
@@ -498,11 +515,151 @@
                 ]
               }
             }
+          },
+          "elm_hXFcVOohAnyl16O8evU1ag": {
+            "elementId": "elm_hXFcVOohAnyl16O8evU1ag",
+            "elements": [
+              "elm_KnXSHjnbocf-hijpmFl3Sg",
+              "elm_Yr_gpHgI6dd2aJPCtLOoyw",
+              "elm_eMx9JEW0UFXd2V9VFFve4g"
+            ],
+            "type": "xycoordinates",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "%",
+                  "value": "90"
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "%",
+                  "value": "90"
+                }
+              },
+              "data": {
+                "element_name": "xycoordinates_3"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset2",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "opacity": ""
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#FACDA8"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "opacity": ""
+                },
+                "opacity": "100"
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              }
+            }
+          },
+          "elm_m7wUjdqLSvC33eCsqp4Rqw": {
+            "elementId": "elm_m7wUjdqLSvC33eCsqp4Rqw",
+            "elements": [
+              "elm_hXFcVOohAnyl16O8evU1ag"
+            ],
+            "type": "canvas",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "%",
+                  "value": "100"
+                },
+                "height": {
+                  "unit": "%",
+                  "value": "100"
+                }
+              }
+            }
           }
         },
         "type": "page",
         "sections": [
-          "elm_8etHo25CQjuKS08Xa3PNeQ"
+          "elm_m7wUjdqLSvC33eCsqp4Rqw"
         ]
       }
 }

@@ -8,24 +8,28 @@
 import UIKit
 
 
-class ImageView: UIView {
+class ImageView: UIImageView {
     let element: ElementViewModel
-    
-    private let imageView = UIImageView()
+
     private let loadingView = UIView()
     private let loadingIndicator = UIActivityIndicatorView(style: .medium)
     private let loadingLabel = UILabel()
+    
     private let failureView = UIView()
     private let defaultView = UIView()
-    private var backgroundImageView: UIImageView?
+    
+    private let imageView = UIImageView()
+    private let imageContainerView = UIImageView()
     
     private var imageLoadTask: URLSessionDataTask?
-    
+
+
     init(element: ElementViewModel) {
         self.element = element
         super.init(frame: .zero)
         setupView()
         loadImage()
+        clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -33,36 +37,34 @@ class ImageView: UIView {
     }
     
     deinit {
-        // Cancel any ongoing image load task to prevent memory leaks
         imageLoadTask?.cancel()
     }
     
     private func setupView() {
-        // Setup main image view
+        
+        imageContainerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = imageContentMode
         imageView.clipsToBounds = true
-        addSubview(imageView)
         
-        // Setup loading view
+        self.addSubview(imageContainerView)
+        imageContainerView.addSubview(imageView)
+        
+        ViewDecorator.applyBackground(imageView: self, element: element)
+        ViewDecorator.applyCornerRadius(view: self, element: element)
+        ViewDecorator.applyShadow(view: self, element: element)
+        ViewDecorator.applyBorder(view: self, element: element)
+        ViewDecorator.applyOpacity(view: self, element: element)
+        
+        ConstraintSetter.fillParent(parent: self, child: imageContainerView)
+        ConstraintSetter.fillParent(parent: imageContainerView, child: imageView, element: element)
+        
         setupLoadingView()
         
-        // Setup failure view
         setupFailureView()
         
-        // Setup default view
         setupDefaultView()
-        
-        // Apply styling
-        applyBorder()
-        applyShadow()
-        
-        // Apply properties
-        layer.cornerRadius = cornerRadius
-        clipsToBounds = true
-        alpha = opacity
-        
-        // Show loading initially
+             
         showLoading()
         
         setupConstraints()
@@ -144,39 +146,9 @@ class ImageView: UIView {
     }
     
     private func setupConstraints() {
-        let paddingInsets = padding
         
-        // Main container constraints with margins
-        var constraints: [NSLayoutConstraint] = []
-        
-        // Width constraint
-        if let width = frameWidth {
-            constraints.append(widthAnchor.constraint(equalToConstant: width))
-        }
-        
-        // Height constraint
-        if let height = frameHeight {
-            constraints.append(heightAnchor.constraint(equalToConstant: height))
-        }
-        
-        NSLayoutConstraint.activate(constraints)
-        
-        // Image view constraints with padding
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: paddingInsets.top),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: paddingInsets.leading),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -paddingInsets.trailing),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -paddingInsets.bottom)
-        ])
-        
-        // Loading, failure, and default views fill the entire view
         for view in [loadingView, failureView, defaultView] {
-            NSLayoutConstraint.activate([
-                view.topAnchor.constraint(equalTo: topAnchor),
-                view.leadingAnchor.constraint(equalTo: leadingAnchor),
-                view.trailingAnchor.constraint(equalTo: trailingAnchor),
-                view.bottomAnchor.constraint(equalTo: bottomAnchor)
-            ])
+            ConstraintSetter.fillParent(parent: self, child: view)
         }
     }
     
@@ -188,13 +160,14 @@ class ImageView: UIView {
             return
         }
         
-        let domainURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(src)"
+//        let domainURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(src)"
+        let domainURL = src
         
         guard let encodedURLString = domainURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: encodedURLString) else {
-                showDefault()
-                return
-             }
+            showDefault()
+            return
+        }
         
         showLoading()
         
@@ -208,7 +181,7 @@ class ImageView: UIView {
                     return
                 }
                 guard let data = data,
-                let image = UIImage(data: data) else {
+                      let image = UIImage(data: data) else {
                     self.showFailure()
                     return
                 }
@@ -253,59 +226,6 @@ class ImageView: UIView {
     
     // MARK: - Computed Properties
     
-    private var frameWidth: CGFloat? {
-        guard let width = element.elementDetail?.layout?.width else {
-            return nil
-        }
-        switch width.unit {
-        case .px:
-            return CGFloat(Double(width.value ?? "0") ?? 0)
-        case .auto, .fitContent, .fillContent, .percent:
-            return nil
-        default:
-            return nil
-        }
-    }
-    
-    private var frameHeight: CGFloat? {
-        guard let height = element.elementDetail?.layout?.height else {
-            return nil
-        }
-        switch height.unit {
-        case .px:
-            return CGFloat(Double(height.value ?? "0") ?? 0)
-        case .auto, .fitContent, .fillContent, .percent:
-            return nil
-        default:
-            return nil
-        }
-    }
-    
-    private var cornerRadius: CGFloat {
-        guard let cornerRadius = element.elementDetail?.style?.cornerRadius else {
-            return 0
-        }
-        if let value = cornerRadius.value, !value.isEmpty {
-            let cleanedValue = value
-                .replacingOccurrences(of: "px", with: "", options: .caseInsensitive)
-                .trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            return CGFloat(Double(cleanedValue) ?? 0)
-        }
-        if let preset = cornerRadius.preset, !preset.isEmpty {
-            switch preset {
-            case "preset1": return 6
-            case "preset2": return 12
-            case "preset3": return 16
-            case "preset4": return 24
-            case "preset5": return 32
-            case "preset6": return 1000
-            default: break
-            }
-        }
-        return 0
-    }
-    
     private var imageContentMode: UIView.ContentMode {
         if let value = element.elementDetail?.style?.image?.size {
             switch value {
@@ -320,104 +240,22 @@ class ImageView: UIView {
         return .scaleAspectFill
     }
     
-    private var padding: (top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
+    private var padding: UIEdgeInsets {
         guard let padding = element.elementDetail?.style?.padding else {
-            return (0, 0, 0, 0)
+            return UIEdgeInsets.zero
         }
         if padding.isEven == true, let value = padding.value {
-            let value = CGFloat(Double(value) ?? 4)
-            return (value, value, value, value)
-        } else {
-            let top = CGFloat(Double(padding.top?.value ?? "0") ?? 0)
-            let left = CGFloat(Double(padding.left?.value ?? "0") ?? 0)
-            let right = CGFloat(Double(padding.right?.value ?? "0") ?? 0)
-            let bottom = CGFloat(Double(padding.bottom?.value ?? "0") ?? 0)
+            let value = Double(value) ?? 0
+            return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
+        }
+        else{
+            let top = Double(padding.top?.value ?? "0") ?? 0
+            let left = Double(padding.left?.value ?? "0") ?? 0
+            let right = Double(padding.right?.value ?? "0") ?? 0
+            let bottom = Double(padding.bottom?.value ?? "0") ?? 0
             
-            return (top, left, bottom, right)
+            return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         }
     }
-    
-    private var topMargin: CGFloat? {
-        guard let isEnabled = element.elementDetail?.layout?.constraints?.top?.isEnabled,
-              isEnabled,
-              let value = element.elementDetail?.layout?.constraints?.top?.value,
-              let margin = Double(value) else {
-            return nil
-        }
-        return CGFloat(margin)
-    }
-    
-    private var leftMargin: CGFloat? {
-        guard let isEnabled = element.elementDetail?.layout?.constraints?.left?.isEnabled,
-              isEnabled,
-              let value = element.elementDetail?.layout?.constraints?.left?.value,
-              let margin = Double(value) else {
-            return nil
-        }
-        return CGFloat(margin)
-    }
-    
-    private var rightMargin: CGFloat? {
-        guard let isEnabled = element.elementDetail?.layout?.constraints?.right?.isEnabled,
-              isEnabled,
-              let value = element.elementDetail?.layout?.constraints?.right?.value,
-              let margin = Double(value) else {
-            return nil
-        }
-        return CGFloat(margin)
-    }
-    
-    private var bottomMargin: CGFloat? {
-        guard let isEnabled = element.elementDetail?.layout?.constraints?.bottom?.isEnabled,
-              isEnabled,
-              let value = element.elementDetail?.layout?.constraints?.bottom?.value,
-              let margin = Double(value) else {
-            return nil
-        }
-        return CGFloat(margin)
-    }
-    
-    private var opacity: Double {
-        guard let opacity = element.elementDetail?.style?.opacity else {
-            return 1.0
-        }
-        return (Double(opacity) ?? 100) / 100.0
-    }
-    
-    // MARK: - Styling Methods
-    
- 
-    private func applyBorder() {
-        if let border = element.elementDetail?.style?.border,
-           (border.isEnabled ?? true),
-           let thickness = border.thickness,
-           let thicknessValue = Double(thickness),
-           thicknessValue > 0 {
-            
-            layer.borderWidth = CGFloat(thicknessValue)
-            layer.borderColor = (UIColor(hex: border.color ?? "#000000") ?? .black).cgColor
-        } else {
-            layer.borderWidth = 0
-        }
-    }
-    
-    private func applyShadow() {
-        guard let shadow = element.elementDetail?.style?.shadow,
-              shadow.isEnabled == true else {
-            layer.shadowOpacity = 0
-            return
-        }
         
-        let colorString = shadow.color ?? ""
-        let shadowUIColor = !colorString.isEmpty ? (UIColor(hex: colorString) ?? .clear) : .clear
-        let blur = CGFloat(Double(shadow.blur ?? "0") ?? 0)
-        let x = CGFloat(Double(shadow.xOffset ?? "0") ?? 0)
-        let y = CGFloat(Double(shadow.yOffset ?? "0") ?? 0)
-        
-        layer.shadowColor = shadowUIColor.cgColor
-        layer.shadowRadius = blur
-        layer.shadowOffset = CGSize(width: x, height: y)
-        layer.shadowOpacity = 1.0
-        layer.masksToBounds = false
-    }
 }

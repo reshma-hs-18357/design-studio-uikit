@@ -1,0 +1,229 @@
+{
+    "page_content" : {
+        "elements": {
+          "elm_g6fAo9iKQaCkrk74kp4DLA": {
+            "elementId": "elm_g6fAo9iKQaCkrk74kp4DLA",
+            "elements": [
+              "elm_KIbyiOO_SpKTTCm2GPGwfg"
+            ],
+            "type": "canvas",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "%",
+                  "value": "100"
+                },
+                "height": {
+                  "unit": "%",
+                  "value": "100"
+                }
+              }
+            }
+          },
+          "elm_KIbyiOO_SpKTTCm2GPGwfg": {
+            "elementId": "elm_KIbyiOO_SpKTTCm2GPGwfg",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "px",
+                  "value": "300"
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "82"
+                  },
+                  "left": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "107"
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": "50"
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "px",
+                  "value": "300"
+                }
+              },
+              "data": {
+                "element_name": "heading_3"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "color": "#000000",
+                  "thickness": "2"
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "20"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "size": "fill",
+                    "src": "appbuilder/images/designstudio/static/ptrn_1.png",
+                    "builder_src": "appbuilder/images/designstudio/static/ptrn_1.png",
+                    "position": "center"
+                  },
+                  "color": ""
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Lato',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "\u003Cp\u003E                            To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.\u003C/p\u003E"
+            }
+          },
+        },
+        "type": "page",
+        "sections": [
+          "elm_g6fAo9iKQaCkrk74kp4DLA"
+        ]
+      }
+}
+

@@ -82,14 +82,12 @@ enum Templates: String, CaseIterable {
             ]
         case .individual:
             return [
-                (pageName: "Image Only Element", jsonSource: "ImageOnlyView")
+                (pageName: "Image Only Element", jsonSource: "ImageOnlyView"),
+                (pageName: "Text Only Element", jsonSource: "TextOnly"),
+                (pageName: "XYCoordinate Element", jsonSource: "XYCoordinateOnlyTest"),
+                (pageName: "VerticalStack Element", jsonSource: "VerticalStackOnly")
             ]
             
-//        case .sampleJson:
-//            return [
-//                (pageName: "SampleJson - First Page" , jsonSource: "FirstPage"),
-//                (pageName: "SampleJson - Second Page" , jsonSource: "SecondPage")
-//            ]
-        }
+        }   
     }
 }

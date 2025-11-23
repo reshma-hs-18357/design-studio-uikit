@@ -30,6 +30,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5D0FFD532ED3103400619EEA /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKitTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Views/PageContent/Elements/HorizontalView/LayoutViewController.swift,
+			);
+			target = 5DAAFC442EC5DF4E00A68C9E /* DesignStudioUIKitTests */;
+		};
 		5DAAFC572EC5DF4E00A68C9E /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKit" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -44,6 +51,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				5DAAFC572EC5DF4E00A68C9E /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKit" target */,
+				5D0FFD532ED3103400619EEA /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKitTests" target */,
 			);
 			path = DesignStudioUIKit;
 			sourceTree = "<group>";
@@ -287,7 +295,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -314,7 +323,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
