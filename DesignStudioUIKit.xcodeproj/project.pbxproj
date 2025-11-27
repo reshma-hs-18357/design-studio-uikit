@@ -33,7 +33,9 @@
 		5D0FFD532ED3103400619EEA /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKitTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Views/PageContent/Elements/HorizontalView/HorizontalView.swift,
 				Views/PageContent/Elements/HorizontalView/LayoutViewController.swift,
+				Views/PageContent/Elements/HorizontalView/SubElementCell.swift,
 			);
 			target = 5DAAFC442EC5DF4E00A68C9E /* DesignStudioUIKitTests */;
 		};

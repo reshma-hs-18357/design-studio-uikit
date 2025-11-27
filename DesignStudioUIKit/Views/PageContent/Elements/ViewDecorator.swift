@@ -47,7 +47,7 @@ class ViewDecorator {
            let thicknessValue = Double(thickness),
            thicknessValue > 0 {
             view.layer.borderWidth = CGFloat(thicknessValue)
-            view.layer.borderColor = (UIColor(hex: border.color ?? "#000000") ?? .black).cgColor
+            view.layer.borderColor = (UIColor(hex: border.color ?? "#000000") ?? .clear).cgColor
         } else {
             view.layer.borderWidth = 0
         }
@@ -92,12 +92,13 @@ class ViewDecorator {
         }
         if let preset = cornerRadius.preset, !preset.isEmpty {
             switch preset {
-            case "preset1": return 6
-            case "preset2": return 12
-            case "preset3": return 16
-            case "preset4": return 24
-            case "preset5": return 32
-            case "preset6": return 1000
+            case "preset1": return 0
+            case "preset2": return 6
+            case "preset3": return 12
+            case "preset4": return 16
+            case "preset5": return 24
+            case "preset6": return 32
+            case "preset7": return 1000
             default: break
             }
         }

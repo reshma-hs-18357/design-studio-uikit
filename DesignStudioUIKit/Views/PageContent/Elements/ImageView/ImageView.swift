@@ -19,7 +19,7 @@ class ImageView: UIImageView {
     private let defaultView = UIView()
     
     private let imageView = UIImageView()
-    private let imageContainerView = UIImageView()
+    private let imageContainerView = UIView()
     
     private var imageLoadTask: URLSessionDataTask?
 
@@ -49,7 +49,7 @@ class ImageView: UIImageView {
         
         self.addSubview(imageContainerView)
         imageContainerView.addSubview(imageView)
-        
+        imageContainerView.backgroundColor = .blue.withAlphaComponent(0.2)
         ViewDecorator.applyBackground(imageView: self, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)
@@ -160,8 +160,8 @@ class ImageView: UIImageView {
             return
         }
         
-//        let domainURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(src)"
-        let domainURL = src
+        let domainURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(src)"
+//        let domainURL = src
         
         guard let encodedURLString = domainURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: encodedURLString) else {

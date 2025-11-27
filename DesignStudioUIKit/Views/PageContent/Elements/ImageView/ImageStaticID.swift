@@ -6,4 +6,4 @@
 //
 
 
-public  var staticImageID = "11928680"
+public  var staticImageID = "12002292"

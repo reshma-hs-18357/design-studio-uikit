@@ -41,6 +41,9 @@ class PageContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        UIScrollView.appearance().bounces = false
+
+        
         setupUI()
         loadPageContent()
     }
@@ -94,6 +97,7 @@ class PageContentViewController: UIViewController {
     private func renderContent(root: ElementViewModel) {
         contentContainer.subviews.forEach { $0.removeFromSuperview() }
         ElementRendererView.renderElement(parent: self.view, element: root, elementsMap: elementsMap)
+        view.layoutIfNeeded()
     }
 
 

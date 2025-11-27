@@ -48,13 +48,13 @@
                   "right": {
                     "is_enabled": false,
                     "unit": "px",
-                    "value": "50"
+                    "value": ""
                   },
                   "position": "absolute"
                 },
                 "height": {
                   "unit": "px",
-                  "value": "300"
+                  "value": "100"
                 }
               },
               "data": {
@@ -216,9 +216,9 @@
                   }
                 ]
               },
-              "content": "\u003Cp\u003E                            To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.\u003C/p\u003E"
+              "content": "\u003Cp\u003ETo create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.\u003C/p\u003E"
             }
-          },
+          }
         },
         "type": "page",
         "sections": [

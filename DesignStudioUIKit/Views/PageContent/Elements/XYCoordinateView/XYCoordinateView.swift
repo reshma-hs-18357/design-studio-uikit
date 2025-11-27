@@ -33,7 +33,7 @@ class XYCoordinateView: UIView {
         xyview.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(xyContainerView)
-        xyContainerView.addSubview(xyview)
+        addSubview(xyview)
         
 //        self.contentInset = padding
 

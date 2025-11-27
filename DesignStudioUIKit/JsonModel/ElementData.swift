@@ -14,6 +14,7 @@ struct ElementData: Codable{
     let linkURL: String?
     let imageSrc: String?
     let builderSrc: String?
+    let content: String?
     
     private enum CodingKeys: String, CodingKey {
         case displayName = "display_name"
@@ -22,6 +23,7 @@ struct ElementData: Codable{
         case builderSrc = "builder_src"
         case componentID = "component_id"
         case linkURL = "link_url"
+        case content = "content"
     }
 }
 

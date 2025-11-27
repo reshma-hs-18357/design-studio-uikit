@@ -9,7 +9,7 @@ import UIKit
 
 struct ElementRendererView {
 
-    public static func renderElement(parent : UIView,element: ElementViewModel, elementsMap: [String: ElementViewModel] )  {
+    public static func renderElement(parent : UIView ,element: ElementViewModel, elementsMap: [String: ElementViewModel] )  {
         
         switch element.elementType {
             
@@ -18,58 +18,109 @@ struct ElementRendererView {
             parent.addSubview(rendered)
             rendered.translatesAutoresizingMaskIntoConstraints = false
             ConstraintSetter.fillParent(parent: parent, child: rendered)
-
+            
             
         case .horizontalFlex:
-            return
+            let rendered = HorizontalView(element: element, elementsMap: elementsMap)
+           rendered.translatesAutoresizingMaskIntoConstraints = false
+           if let parent = parent as? UIStackView {
+               parent.addArrangedSubview(rendered)
+               ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+           }
+           else{
+               parent.addSubview(rendered)
+               ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+           }
             
         case .xycoordinates:
             let rendered =  XYCoordinateView(element: element, elementsMap: elementsMap)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            }
+            else{
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+
+            }
             
         case .verticalFlex:
              let rendered = VerticalView(element: element, elementsMap: elementsMap)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
-            
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            }
+            else{
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
+
         case .heading:
             let rendered = TextView(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent:parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent:parent, child: rendered, element: element)
+            }
         
         case .image:
             let rendered =  ImageView(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
             
         case .createPassword:
             let rendered =  CreatePassword(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
             
         case .forgotPassword:
             let rendered =  ResetPassword(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
             
         case .signin:
             let rendered =  SignIn(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
-            
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
         case .signup:
             let rendered =  SignUp(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            parent.addSubview(rendered)
-            ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
 
         case .menu:
             return

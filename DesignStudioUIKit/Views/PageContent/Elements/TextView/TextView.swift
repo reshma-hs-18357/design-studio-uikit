@@ -9,7 +9,7 @@ import UIKit
 
 class TextView: UIImageView {
     let element: ElementViewModel
-
+    private var textViewHeightConstraint: NSLayoutConstraint?
     private let textView = UITextView()
     
     init(element: ElementViewModel) {
@@ -23,26 +23,23 @@ class TextView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     private func setupView(){
         guard let content = element.elementDetail?.content else { return }
-        
-        self.isUserInteractionEnabled = true // UIImageView blocks the default scroll behaviour of UITextView
-        self.backgroundColor = .purple
+        self.addSubview(textView)
+        self.isUserInteractionEnabled = true
 
         textView.translatesAutoresizingMaskIntoConstraints = false
 
-        self.addSubview(textView)
-                
         textView.text = cleanContent(content)
         textView.font = fontStyle
         textView.textColor = textViewColor
-        textView.isScrollEnabled = true
         textView.isEditable = false
         textView.textAlignment = textViewAlignment
         textView.backgroundColor = .clear
+        textView.bounces = false
+        
         textView.textContainerInset =  padding
-        textView.textContainer.lineFragmentPadding = 0
+//        textView.backgroundColor = .red
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -50,9 +47,30 @@ class TextView: UIImageView {
         ViewDecorator.applyShadow(view: self, element: element)
         ViewDecorator.applyBorder(view: self, element: element)
         ViewDecorator.applyOpacity(view: self, element: element)
-        
+                
         ConstraintSetter.fillParent(parent: self, child: textView)
-
+        
+        if element.elementDetail?.layout?.height?.unit == .auto {
+            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
+            textViewHeightConstraint?.isActive = true
+            calcContentSize(child: textView)
+        }
+    }
+    
+    private func calcContentSize(child: UITextView)  {
+        var availableParentWidth = textView.frame.width
+        guard let width = element.elementDetail?.layout?.width else {
+          return
+        }        
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+            let size = CGSize(width: self.textView.frame.width, height: .infinity)
+            let estimatedSize = self.textView.sizeThatFits(size)
+                self.textViewHeightConstraint?.constant = estimatedSize.height
+//                    UIView.animate(withDuration: 0.1) {
+                        self.layoutIfNeeded()
+//                    }
+        })
+    
     }
     
     
@@ -112,24 +130,23 @@ class TextView: UIImageView {
         let weight = fontWeight(from: font.weight)
         return .systemFont(ofSize: size, weight: weight)
     }
+
+    private func fontWeight(from weightString: String?) -> UIFont.Weight {
+        guard (weightString?.lowercased()) != nil else { return .regular }
     
-    private func fontWeight(from weight: String?) -> UIFont.Weight {
-        guard let weight = weight?.lowercased() else { return .regular }
-        
-        switch weight {
-        case "thin": return .thin
-        case "ultralight": return .ultraLight
-        case "light": return .light
-        case "regular": return .regular
-        case "medium": return .medium
-        case "semibold": return .semibold
-        case "bold": return .bold
-        case "heavy": return .heavy
-        case "black": return .black
+        switch weightString {
+        case "100": return .ultraLight
+        case "200": return .thin
+        case "300": return .light
+        case "400": return .regular
+        case "500": return .medium
+        case "600": return .semibold
+        case "700": return .bold
+        case "800": return .heavy
+        case "900": return .black
         default: return .regular
         }
     }
-    
     
     private var textViewColor: UIColor {
         guard let hex = element.elementDetail?.style?.font?.color, !hex.isEmpty else {

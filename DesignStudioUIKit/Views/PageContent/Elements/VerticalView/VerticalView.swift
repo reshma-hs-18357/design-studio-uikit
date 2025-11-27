@@ -7,11 +7,10 @@
 
 import UIKit
 
-class VerticalView: UIStackView {
+class VerticalView: UIImageView {
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
-    private let verticalContainerView = UIImageView()
     private let verticalStackView = UIStackView()
     
     init(element: ElementViewModel, elementsMap: [String : ElementViewModel]) {
@@ -28,35 +27,25 @@ class VerticalView: UIStackView {
     }
     
     private func setupView() {
-        self.layoutMargins = padding
-        self.isLayoutMarginsRelativeArrangement = true
+        addSubview(verticalStackView)
+        self.isUserInteractionEnabled = true
 
-        verticalContainerView.translatesAutoresizingMaskIntoConstraints = false
+//        verticalStackView.layoutMargins = padding
+//        verticalStackView.isLayoutMarginsRelativeArrangement = true
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(verticalContainerView)
-        verticalContainerView.addSubview(verticalStackView)
-        
+            
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
-        verticalStackView.alignment = subElementsAlignment
+        verticalStackView.alignment = .leading
         verticalStackView.distribution = .fillProportionally
-        verticalStackView.isUserInteractionEnabled = true
-        verticalStackView.isLayoutMarginsRelativeArrangement = true
-        verticalStackView.layoutMargins = padding
         
-        
-        // Apply styling
-        ViewDecorator.applyBackground(imageView: verticalContainerView, element: element)
+        ViewDecorator.applyBackground(imageView: self, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)
         ViewDecorator.applyBorder(view: self, element: element)
         ViewDecorator.applyOpacity(view: self, element: element)
         
-        
-        ConstraintSetter.fillParent(parent: self, child: verticalContainerView)
-        ConstraintSetter.fillParent(parent: verticalContainerView, child: verticalStackView)
-        
+        ConstraintSetter.fillParent(parent: self, child: verticalStackView, element: element)
         setupSubElements()
     }
     
@@ -65,47 +54,12 @@ class VerticalView: UIStackView {
        
         for subElementId in subElements {
             if let subElement = elementsMap[subElementId] {
-                
-                let childWrapper = UIView()
-                childWrapper.translatesAutoresizingMaskIntoConstraints = false
-                verticalStackView.addArrangedSubview(childWrapper)
-        
-                ElementRendererView.renderElement(parent: childWrapper, element: subElement, elementsMap: elementsMap)
-               
-                ConstraintSetter.applyStackChildConstraints(stackView: verticalStackView, parent: childWrapper, element: element)
-    
-                ConstraintSetter.fillParent(parent: childWrapper, child: childWrapper.subviews.first!)
-
+                ElementRendererView.renderElement(parent: verticalStackView, element: subElement, elementsMap: elementsMap)
             }
         }
     }
     
-//    override func sizeThatFits(_ size: CGSize) -> CGSize {
-//        calculateIntrinsicSize(for: size.width)
-//    }
-//
-//    override var intrinsicContentSize: CGSize {
-//        calculateIntrinsicSize(for: bounds.width)
-//    }
-//    
-//    private func calculateIntrinsicSize(for width: CGFloat) -> CGSize {
-//        guard !arrangedSubviews.isEmpty else {
-//            return CGSize(width: width, height: padding.top + padding.bottom)
-//        }
-//        
-//        let availableWidth = width - padding.left - padding.right
-//        let totalSpacing = spacing * CGFloat(arrangedSubviews.count - 1)
-//        
-//        let totalHeight = arrangedSubviews.reduce(0) { result, view in
-//            let size = view.sizeThatFits(CGSize(width: availableWidth, height: .greatestFiniteMagnitude))
-//            return result + size.height
-//        }
-//        
-//        return CGSize(
-//            width: width,
-//            height: totalHeight + totalSpacing + padding.top + padding.bottom
-//        )
-//    }
+
     
     private var gap: CGFloat {
        return Double(element.elementDetail?.style?.flex?.gap ?? "0") ?? 0
@@ -131,8 +85,13 @@ class VerticalView: UIStackView {
     
     private var subElementsAlignment: UIStackView.Alignment {
         guard let alignment = element.elementDetail?.style?.flex?.align else {
+            
             return .center
         }
+        print("vstack alignment")
+        print(element.elementId)
+        print(alignment)
+ 
         switch alignment {
             case .topLeft : return .leading
             case .topRight : return .trailing

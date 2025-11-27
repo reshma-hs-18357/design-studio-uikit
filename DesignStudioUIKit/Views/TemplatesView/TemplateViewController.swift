@@ -84,7 +84,7 @@ extension TemplatesExpandableViewController: UITableViewDelegate {
         let button = UIButton(type: .system)
         button.tag = section
         button.contentHorizontalAlignment = .left
-        button.titleEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 0)
+//        button.titleEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 0)
 
         let title = "\(template.rawValue)    (\(template.pageTypes.count) pages)"
         button.setTitle(title, for: .normal)

@@ -44,51 +44,44 @@ class ConstraintSetter {
     }
     
     private static func hasTopConstraint (element :ElementViewModel) -> Bool {
-        //should check allignment once json provides them and check for height values if alignment is avaialable
         let isEnabled = element.elementDetail?.layout?.constraints?.top?.isEnabled ?? false
-        
-        if element.elementDetail?.layout?.height?.unit == .auto {
-            return true
-        }
+//        if element.elementDetail?.layout?.height?.unit == .auto {
+//            return true
+//        }
         return isEnabled
     }
 
     private static func hasBottomConstraint (element :ElementViewModel) -> Bool {
-        //should check allignment once json provides them and check for height values if alignment is avaialable
         let isEnabled = element.elementDetail?.layout?.constraints?.bottom?.isEnabled ?? false
-       
-        if element.elementDetail?.layout?.height?.unit == .auto {
-            return true
-        }
+//        if element.elementDetail?.layout?.height?.unit == .auto {
+//            return true
+//        }
         return isEnabled
     }
     
     private static func hasLeadingConstraint (element :ElementViewModel) -> Bool {
-        //should check allignment once json provides them and check for width values if alignment is avaialable
         let isEnabled = element.elementDetail?.layout?.constraints?.left?.isEnabled ?? false
-        
-        if element.elementDetail?.layout?.width?.unit == .auto {
-            return true
-        }
+//        if element.elementDetail?.layout?.width?.unit == .auto {
+//            return true
+//        }
         return isEnabled
     }
     
     private static func hasTrailingConstraint (element :ElementViewModel) -> Bool {
-        //should check allignment once json provides them and check for width values if alignment is avaialable
         let isEnabled = element.elementDetail?.layout?.constraints?.right?.isEnabled ?? false
-        if element.elementDetail?.layout?.width?.unit == .auto {
-            return true
-        }
+//        if isEnabled && hasLeadingConstraint(element: element) && element.elementDetail?.layout?.width?.unit == .auto {
+//            return true
+//        }
         return isEnabled
     }
     
     private static func applyHeightConstraints(parent: UIView, child: UIView, element :ElementViewModel) {
+        
         guard let height = element.elementDetail?.layout?.height else {
           return
         }
         switch height.unit {
         case .px:
-            
             let frameHeight = CGFloat(Double(height.value ?? "0") ?? 0)
             child.heightAnchor.constraint(equalToConstant: frameHeight).isActive = true
          
@@ -98,21 +91,18 @@ class ConstraintSetter {
             let multiplier = percentValue / 100.0
             if multiplier < 1.0 {
                 child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: CGFloat(multiplier)).isActive = true
-                child.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
             }
             else {
                 let overflow = (multiplier - 1.0) / 2.0
                 let margin = parent.bounds.width * overflow
                 child.topAnchor.constraint(equalTo: parent.topAnchor, constant: -1 * margin).isActive = true
                 child.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: margin).isActive = true
-                
             }
             
         case .auto:
-
             return
+            
         case .fillContent, .fitContent:
-           
             child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: 1.0).isActive = true
            
         default:
@@ -133,13 +123,12 @@ class ConstraintSetter {
             
         case .percent:
             print(parent.tag);
-            
+            let padding = padding(elementModel: element)
             let percentValue = Double(width.value ?? "0") ?? 0
             let multiplier = percentValue / 100.0
-            if multiplier < 1.0 {
+         
+            if multiplier <= 1.0 {
                 child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
-                child.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
-
             }
             else {
                 let overflow = (multiplier - 1.0) / 2.0
@@ -149,8 +138,7 @@ class ConstraintSetter {
             }
             
         case .auto:
-            child.widthAnchor.constraint(lessThanOrEqualTo: parent.widthAnchor).isActive = true
-
+            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
             
         case .fillContent, .fitContent:
             child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true
@@ -235,13 +223,77 @@ extension ConstraintSetter {
             return UIEdgeInsets.init(top: top, left: left, bottom: bottom, right: right)
         }
     }
-    
-    static func applyStackChildConstraints(stackView: UIStackView, parent: UIView, element: ElementViewModel) {
-        
-        applyHeightConstraints(parent: stackView, child: parent, element: element)
-        
-        applyWidthConstraints(parent: stackView, child: parent, element: element)
-
-    }
 }
 
+extension ConstraintSetter {
+    
+    static func applyStackChildConstraints(stackView: UIStackView, child: UIView, element: ElementViewModel) {
+        applyStackHeightConstraints(parent: stackView, child: child, element: element)
+        applyStackWidthConstraints(parent: stackView, child: child, element: element)
+    }
+    
+    private static func applyStackHeightConstraints(parent: UIView, child: UIView, element: ElementViewModel) {
+        guard let height = element.elementDetail?.layout?.height else {
+            return
+        }
+        switch height.unit {
+        case .px:
+            let frameHeight = CGFloat(Double(height.value ?? "0") ?? 0)
+            child.heightAnchor.constraint(equalToConstant: frameHeight).isActive = true
+            
+        case .percent:
+            let percentValue = Double(height.value ?? "0") ?? 0
+            let multiplier = percentValue / 100.0
+            child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: CGFloat(multiplier)).isActive = true
+        
+            
+        case .auto:
+            child.bottomAnchor.constraint(lessThanOrEqualTo: parent.bottomAnchor).isActive = true
+            
+        case .fillContent, .fitContent:
+            child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: 1.0).isActive = true
+            
+        default:
+            return
+        }
+    }
+    
+    private static func applyStackWidthConstraints(parent: UIView, child: UIView, element: ElementViewModel) {
+        guard let width = element.elementDetail?.layout?.width else {
+            return
+        }
+        switch width.unit {
+        case .px:
+            let frameWidth = CGFloat(Double(width.value ?? "0") ?? 0)
+            child.widthAnchor.constraint(equalToConstant: frameWidth).isActive = true
+            
+        case .percent:
+//            let percentValue = Double(width.value ?? "0") ?? 0
+//            let multiplier = percentValue / 100.0
+//            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
+            
+            let padding = padding(elementModel: element)
+            let percentValue = Double(width.value ?? "0") ?? 0
+            let multiplier = percentValue / 100.0
+         
+            if multiplier <= 1.0 {
+                child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
+            }
+            else {
+                let overflow = (multiplier - 1.0) / 2.0
+                let margin = parent.bounds.width * overflow
+                child.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: -margin).isActive = true
+                child.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: margin).isActive = true
+            }
+            
+        case .auto:
+            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
+            
+        case .fillContent, .fitContent:
+            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true
+            
+        default:
+            return
+        }
+    }
+}
