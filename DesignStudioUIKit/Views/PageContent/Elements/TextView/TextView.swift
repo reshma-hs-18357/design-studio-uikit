@@ -10,6 +10,7 @@ import UIKit
 class TextView: UIImageView {
     let element: ElementViewModel
     private var textViewHeightConstraint: NSLayoutConstraint?
+    private var textViewWidthConstraint: NSLayoutConstraint?
     private let textView = UITextView()
     
     init(element: ElementViewModel) {
@@ -37,9 +38,8 @@ class TextView: UIImageView {
         textView.textAlignment = textViewAlignment
         textView.backgroundColor = .clear
         textView.bounces = false
-        
         textView.textContainerInset =  padding
-//        textView.backgroundColor = .red
+        textView.isScrollEnabled = (element.elementDetail?.layout?.width?.unit == .auto || element.elementDetail?.layout?.height?.unit == .auto ) ? false : true
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -61,7 +61,7 @@ class TextView: UIImageView {
         var availableParentWidth = textView.frame.width
         guard let width = element.elementDetail?.layout?.width else {
           return
-        }        
+        }
         DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
             let size = CGSize(width: self.textView.frame.width, height: .infinity)
             let estimatedSize = self.textView.sizeThatFits(size)
@@ -156,15 +156,13 @@ class TextView: UIImageView {
     }
     
     private var textViewAlignment: NSTextAlignment {
-        guard let alignString = element.elementDetail?.style?.align?.textAlign?.lowercased() else {
+        guard let horizontalAlignment = element.elementDetail?.style?.align?.horizontal else {
             return .left
         }
-        
-        switch alignString {
-        case "center", "centre": return .center
-        case "right": return .right
-        case "left": return .left
-        default: return .left
+        switch horizontalAlignment {
+            case .left : return .left
+            case .center : return .center
+            case .right : return .right
         }
     }
     
@@ -185,5 +183,6 @@ class TextView: UIImageView {
             return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         }
     }
+    
     
 }

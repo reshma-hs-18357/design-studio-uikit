@@ -97,11 +97,26 @@ struct ElementStyle: Codable {
         }
     }
 
-    struct TextAlign: Codable {
-        let textAlign: String?
+    struct TextAlignment: Codable {
+        
+        enum HorizontalTextAlignment: String, Codable {
+            case left = "left"
+            case center = "center"
+            case right = "right"
+        }
+        
+        enum VerticalTextAlignment: String, Codable {
+            case flexStart = "flex-start"
+            case center = "center"
+            case flexEnd = "flex-end"
+        }
+        
+        let horizontal: HorizontalTextAlignment?
+        let vertical: VerticalTextAlignment?
         
         private enum CodingKeys: String, CodingKey {
-            case textAlign = "text_align"
+            case horizontal = "horizontal"
+            case vertical = "vertical"
         }
     }
 
@@ -201,7 +216,7 @@ struct ElementStyle: Codable {
     let padding: Padding?
     let shadow: Shadow?
     let background: Background?
-    let align: TextAlign?
+    let align: TextAlignment?
     let opacity: String?
     let font: Font?
     let flex: Flex?

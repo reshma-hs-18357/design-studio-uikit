@@ -129,14 +129,15 @@ struct ElementRendererView {
             return
 
         case .icon:
-            let rendered = UIView()
-            rendered.backgroundColor = UIColor(hex: "#008000")
+            let rendered =  IconElement(element: element)
             rendered.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                rendered.widthAnchor.constraint(equalToConstant: 24),
-                rendered.heightAnchor.constraint(equalToConstant: 24)
-            ])
-            parent.addSubview(rendered)
+            if let parent = parent as? UIStackView {
+                parent.addArrangedSubview(rendered)
+                ConstraintSetter.applyStackChildConstraints(stackView: parent, child: rendered, element: element)
+            } else {
+                parent.addSubview(rendered)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+            }
             
         default:
             let v = UIView()

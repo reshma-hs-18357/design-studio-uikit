@@ -36,7 +36,7 @@ class VerticalView: UIImageView {
             
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
-        verticalStackView.alignment = .leading
+        verticalStackView.alignment = subElementsAlignment
         verticalStackView.distribution = .fillProportionally
         
         ViewDecorator.applyBackground(imageView: self, element: element)

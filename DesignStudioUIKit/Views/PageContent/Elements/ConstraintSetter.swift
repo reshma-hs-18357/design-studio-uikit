@@ -268,26 +268,24 @@ extension ConstraintSetter {
             child.widthAnchor.constraint(equalToConstant: frameWidth).isActive = true
             
         case .percent:
-//            let percentValue = Double(width.value ?? "0") ?? 0
-//            let multiplier = percentValue / 100.0
-//            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
-            
-            let padding = padding(elementModel: element)
             let percentValue = Double(width.value ?? "0") ?? 0
             let multiplier = percentValue / 100.0
-         
+            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
+                     
             if multiplier <= 1.0 {
                 child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
             }
             else {
                 let overflow = (multiplier - 1.0) / 2.0
                 let margin = parent.bounds.width * overflow
-                child.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: -margin).isActive = true
+                child.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: -1 * margin).isActive = true
                 child.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: margin).isActive = true
             }
             
         case .auto:
+            child.leadingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
             child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
+//            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true
             
         case .fillContent, .fitContent:
             child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true

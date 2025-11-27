@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ImageView: UIImageView {
     let element: ElementViewModel
 
@@ -49,7 +48,6 @@ class ImageView: UIImageView {
         
         self.addSubview(imageContainerView)
         imageContainerView.addSubview(imageView)
-        imageContainerView.backgroundColor = .blue.withAlphaComponent(0.2)
         ViewDecorator.applyBackground(imageView: self, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)

@@ -85,9 +85,12 @@ enum Templates: String, CaseIterable {
                 (pageName: "Image Only Element", jsonSource: "ImageOnlyView"),
                 (pageName: "Text Only Element", jsonSource: "TextOnly"),
                 (pageName: "XYCoordinate Element", jsonSource: "XYCoordinateOnlyTest"),
-                (pageName: "VerticalStack Element", jsonSource: "VerticalStackOnly"),
-                (pageName: "VerticalStack Element", jsonSource: "VerticalImageOnly"),
-                (pageName: "HorizontalStack Element", jsonSource: "HorizontalView")
+                (pageName: "Vertical Primitive Text", jsonSource: "VerticalStackOnly"),
+                (pageName: "Vertical Complex Text", jsonSource: "VerticalComplex"),
+                (pageName: "HorizontalStack Element", jsonSource: "HorizontalView"),
+                (pageName: "Template Test", jsonSource: "TemplateText"),
+                (pageName: "Template Test Without HS", jsonSource: "TemplateWithoutHS")
+
 
             ]
         }   
