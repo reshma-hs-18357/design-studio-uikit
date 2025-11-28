@@ -27,13 +27,11 @@ class VerticalView: UIImageView {
     }
     
     private func setupView() {
-        addSubview(verticalStackView)
-        self.isUserInteractionEnabled = true
-
-//        verticalStackView.layoutMargins = padding
-//        verticalStackView.isLayoutMarginsRelativeArrangement = true
+        
+        verticalStackView.backgroundColor = .brown.withAlphaComponent(0.5)
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
-            
+        addSubview(verticalStackView)
+    
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
         verticalStackView.alignment = subElementsAlignment
@@ -112,5 +110,4 @@ class VerticalView: UIImageView {
             case .none: return .center
         }
     }
-    
 }

@@ -10,7 +10,6 @@ import UIKit
 class TextView: UIImageView {
     let element: ElementViewModel
     private var textViewHeightConstraint: NSLayoutConstraint?
-    private var textViewWidthConstraint: NSLayoutConstraint?
     private let textView = UITextView()
     
     init(element: ElementViewModel) {
@@ -39,7 +38,9 @@ class TextView: UIImageView {
         textView.backgroundColor = .clear
         textView.bounces = false
         textView.textContainerInset =  padding
-        textView.isScrollEnabled = (element.elementDetail?.layout?.width?.unit == .auto || element.elementDetail?.layout?.height?.unit == .auto ) ? false : true
+        textView.isScrollEnabled = (element.elementDetail?.layout?.width?.unit == .auto  || element.elementDetail?.layout?.height?.unit == .auto ) ? false : true
+        //textView.textContainer.maximumNumberOfLines = 0
+        textView.backgroundColor = .red.withAlphaComponent(0.4)
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -49,52 +50,66 @@ class TextView: UIImageView {
         ViewDecorator.applyOpacity(view: self, element: element)
                 
         ConstraintSetter.fillParent(parent: self, child: textView)
-        
-        if element.elementDetail?.layout?.height?.unit == .auto {
-            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
-            textViewHeightConstraint?.isActive = true
-            calcContentSize(child: textView)
-        }
+//        if element.elementDetail?.layout?.height?.unit == .auto {
+//            textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+//            textView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+//        }
+//        
+//        if element.elementDetail?.layout?.height?.unit == .auto {
+//            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
+//            textViewHeightConstraint?.isActive = true
+//            calcContentSize(child: textView)
+//        }
     }
+    
+//    private func calcContentSize(child: UITextView)  {
+//        guard var width = element.elementDetail?.layout?.width else {
+//          return
+//        }
+//        var widthValue: CGFloat = 0        
+//        switch width.unit {
+//        case .px:
+//            widthValue = CGFloat(Double(width.value ?? "0") ?? 0)
+//         
+//        case .percent:
+//           print("")
+//        case .auto:
+//            return
+//            
+//        case .fillContent, .fitContent:
+//            return
+//           
+//        default:
+//            return
+//           
+//        }
+//        widthValue = (self.textView.frame.width == 0) ? widthValue : self.textView.frame.width
+//        
+//        let size = CGSize(width: widthValue, height: .infinity)
+//        let estimatedSize = self.textView.sizeThatFits(size)
+//            self.textViewHeightConstraint?.constant = estimatedSize.height
+////                    UIView.animate(withDuration: 0.1) {
+//                    self.layoutIfNeeded()
+//    }
+//    
     
     private func calcContentSize(child: UITextView)  {
-        guard var width = element.elementDetail?.layout?.width else {
+        var availableParentWidth = textView.frame.width
+        guard let width = element.elementDetail?.layout?.width else {
           return
         }
-        var widthValue: CGFloat = 0
-        
-        switch width.unit {
-        case .px:
-            widthValue = CGFloat(Double(width.value ?? "0") ?? 0)
-         
-        case .percent:
-           print("")
-        case .auto:
-            return
-            
-        case .fillContent, .fitContent:
-            return
-           
-        default:
-            return
-           
-        }
-        
-        widthValue = (self.textView.frame.width == 0) ? widthValue : self.textView.frame.width
-        
-        let size = CGSize(width: widthValue, height: .infinity)
-        let estimatedSize = self.textView.sizeThatFits(size)
-            self.textViewHeightConstraint?.constant = estimatedSize.height
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+            let size = CGSize(width: self.textView.frame.width, height: .infinity)
+            let estimatedSize = self.textView.sizeThatFits(size)
+                self.textViewHeightConstraint?.constant = estimatedSize.height
 //                    UIView.animate(withDuration: 0.1) {
-                    self.layoutIfNeeded()
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-//          
-////                    }
-//        })
+                        self.layoutIfNeeded()
+//                    }
+        })
     
     }
-    
+//    
+   
     
     private func cleanContent(_ content: String) -> String {
          guard let data = content.data(using: .utf8) else {

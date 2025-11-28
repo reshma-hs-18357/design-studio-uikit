@@ -139,6 +139,7 @@ class ConstraintSetter {
             
         case .auto:
             child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
+//            return
             
         case .fillContent, .fitContent:
             child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true
@@ -246,10 +247,8 @@ extension ConstraintSetter {
             let multiplier = percentValue / 100.0
             child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: CGFloat(multiplier)).isActive = true
         
-            
         case .auto:
-            child.bottomAnchor.constraint(lessThanOrEqualTo: parent.bottomAnchor).isActive = true
-            
+            return
         case .fillContent, .fitContent:
             child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: 1.0).isActive = true
             
@@ -283,9 +282,7 @@ extension ConstraintSetter {
             }
             
         case .auto:
-            child.leadingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
-            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
-//            child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true
+            return
             
         case .fillContent, .fitContent:
             child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 1.0).isActive = true

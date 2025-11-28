@@ -89,10 +89,9 @@ enum Templates: String, CaseIterable {
                 (pageName: "Vertical Complex Text", jsonSource: "VerticalComplex"),
                 (pageName: "HorizontalStack Element", jsonSource: "HorizontalView"),
                 (pageName: "Template Test", jsonSource: "TemplateText"),
-                (pageName: "Template Test Without HS", jsonSource: "TemplateWithoutHS")
-
-
+                (pageName: "Template Test Without HS", jsonSource: "TemplateWithoutHS"),
+                (pageName: "More Vertical Test", jsonSource: "MoreVerticalText"),
             ]
-        }   
+        }
     }
 }

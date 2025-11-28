@@ -29,8 +29,8 @@ class IconElement: UIImageView {
     private func setupView() {
         iconContainerView.translatesAutoresizingMaskIntoConstraints = false
         iconView.translatesAutoresizingMaskIntoConstraints = false
-//        iconContainerView.backgroundColor = .yellow.withAlphaComponent(0.5)
-//        iconView.backgroundColor = .yellow
+        iconContainerView.backgroundColor = .yellow.withAlphaComponent(0.5)
+        iconView.backgroundColor = .yellow
         self.addSubview(iconContainerView)
         iconContainerView.addSubview(iconView)
         
