@@ -58,18 +58,40 @@ class TextView: UIImageView {
     }
     
     private func calcContentSize(child: UITextView)  {
-        var availableParentWidth = textView.frame.width
-        guard let width = element.elementDetail?.layout?.width else {
+        guard var width = element.elementDetail?.layout?.width else {
           return
         }
-        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-            let size = CGSize(width: self.textView.frame.width, height: .infinity)
-            let estimatedSize = self.textView.sizeThatFits(size)
-                self.textViewHeightConstraint?.constant = estimatedSize.height
+        var widthValue: CGFloat = 0
+        
+        switch width.unit {
+        case .px:
+            widthValue = CGFloat(Double(width.value ?? "0") ?? 0)
+         
+        case .percent:
+           print("")
+        case .auto:
+            return
+            
+        case .fillContent, .fitContent:
+            return
+           
+        default:
+            return
+           
+        }
+        
+        widthValue = (self.textView.frame.width == 0) ? widthValue : self.textView.frame.width
+        
+        let size = CGSize(width: widthValue, height: .infinity)
+        let estimatedSize = self.textView.sizeThatFits(size)
+            self.textViewHeightConstraint?.constant = estimatedSize.height
 //                    UIView.animate(withDuration: 0.1) {
-                        self.layoutIfNeeded()
-//                    }
-        })
+                    self.layoutIfNeeded()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+//          
+////                    }
+//        })
     
     }
     

@@ -84,17 +84,7 @@ class HorizontalView: UIView {
         self.backgroundColor = UIColor.systemGray6
     
         // create collection view with a temporary layout
-        let tempLayout = UICollectionViewCompositionalLayout { (_, _) -> NSCollectionLayoutSection? in
-            let size = NSCollectionLayoutSize(widthDimension: .absolute(self.desiredCellWidth),
-                                              heightDimension: .absolute(110))
-            let item = NSCollectionLayoutItem(layoutSize: size)
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
-            let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .continuous
-            section.interGroupSpacing = self.interItemSpacing
-            section.contentInsets = self.sectionInset
-            return section
-        }
+        let tempLayout = generateLayout()
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: tempLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -119,21 +109,19 @@ class HorizontalView: UIView {
         if let cvheight = collectionViewHeight() {
             collectionViewHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: cvheight)
             collectionViewHeightConstraint?.isActive = true
+        }else{
+            observeContentSize()
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        measureMaxCellHeightAndInstallLayout()
+//        measureMaxCellHeightAndInstallLayout()
     }
    
-    private func measureMaxCellHeightAndInstallLayout() {
-
+    private func generateLayout() -> UICollectionViewLayout {
+        
         if shouldWrapToNextRow {
-            // -------------------------------------------
-            // MULTI-ROW MODE (vertical scroll, wrapping)
-            // -------------------------------------------
-
             let flow = UICollectionViewFlowLayout()
             flow.scrollDirection = .vertical
             flow.minimumInteritemSpacing = interItemSpacing
@@ -148,94 +136,68 @@ class HorizontalView: UIView {
             // Fixed cell width + automatic height
             flow.estimatedItemSize = CGSize(width: desiredCellWidth, height: maxMeasuredItemHeight)
             flow.itemSize = UICollectionViewFlowLayout.automaticSize
-            collectionView.collectionViewLayout.invalidateLayout()
-
-            collectionView.setCollectionViewLayout(flow, animated: false)
-            collectionView.isScrollEnabled = true               // vertical scroll
-            collectionView.showsHorizontalScrollIndicator = false
+            //collectionView.collectionViewLayout.invalidateLayout()
             
-           return
+            return flow
         }
-
-        // -------------------------------------------
-        // SINGLE-ROW MODE (horizontal scroll)
-        // -------------------------------------------
-
-        let measured = measureMaxHeightForAllItems()
-        let padded = ceil(measured)
-        guard padded != maxMeasuredItemHeight else { return }
-        maxMeasuredItemHeight = padded
-
-        let layout = UICollectionViewCompositionalLayout { [weak self] (_, _) -> NSCollectionLayoutSection? in
+        
+        return UICollectionViewCompositionalLayout { [weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            
             guard let self = self else { return nil }
-
+            
+            // 1. Item
             let itemSize = NSCollectionLayoutSize(
-                widthDimension: .absolute(self.desiredCellWidth),
-                heightDimension: .fractionalHeight(1.0)
+                widthDimension: .estimated(100),
+                heightDimension: .estimated(100)
             )
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
+            
+            // 2. Group
             let groupSize = NSCollectionLayoutSize(
-                widthDimension: .absolute(self.desiredCellWidth),
-                heightDimension: .absolute(self.maxMeasuredItemHeight)
+                widthDimension: .estimated(100),
+                heightDimension: .estimated(100)
             )
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
+            
+            // 3. Section
             let section = NSCollectionLayoutSection(group: group)
+            
+            // FIX: Use self.padding directly if it is NSDirectionalEdgeInsets
+            // (No need to create new insets if types match)
+            section.contentInsets = self.padding
+            
+            section.interGroupSpacing = self.gap
             section.orthogonalScrollingBehavior = .continuous
-            section.interGroupSpacing = self.interItemSpacing
-            section.contentInsets = self.sectionInset
-
+            
             return section
-        }
-
-        collectionView.setCollectionViewLayout(layout, animated: false)
-        collectionView.reloadData()
-
-        // Resize collection view height (single-row mode only)
-        if collectionViewHeight() == nil {
-            collectionViewHeightConstraint?.isActive = false
-            collectionViewHeightConstraint = collectionView.heightAnchor.constraint(
-                equalToConstant: maxMeasuredItemHeight + sectionInset.top + sectionInset.bottom
-            )
-            collectionViewHeightConstraint?.isActive = true
         }
     }
 
-    private func measureMaxHeightForAllItems() -> CGFloat {
-            // prototype cell (offscreen)
-            let prototype = SubElementsCell(frame: .zero)
-
-            // We must ensure the prototype cell uses the same width as in the layout.
-            // If the cell has internal horizontal insets (content margins), you must account for them
-            // but here we assume the cell expects the full item width as its content width.
-
-            var maxHeight: CGFloat = 0
-            // Limit measurement if very large dataset to avoid cost — measure first N and a sample of rest.
-            // For now we'll measure all; change `itemsToMeasure` if performance is a concern.
-            let itemsToMeasure = horizontalSubElements.enumerated().map { $0 } // all
-            for (_, item) in itemsToMeasure {
-                prototype.prepareForReuse()
-                prototype.configure(element: item, elementsMap: allElementsMap)
-
-                // Set bounds to a width = desiredCellWidth and large height so internal layout can compute correctly
-                prototype.bounds = CGRect(x: 0, y: 0, width: desiredCellWidth, height: 1000)
-                prototype.layoutIfNeeded()
-
-                // systemLayoutSizeFitting with required horizontal priority
-                let targetSize = CGSize(width: desiredCellWidth, height: UIView.layoutFittingCompressedSize.height)
-                let fitting = prototype.contentView.systemLayoutSizeFitting(
-                    targetSize,
-                    withHorizontalFittingPriority: .required,
-                    verticalFittingPriority: .fittingSizeLevel
-                )
-
-                let h = ceil(fitting.height)
-                maxHeight = max(maxHeight, h)
+    private var contentSizeObservation: NSKeyValueObservation?
+    private func observeContentSize() {
+            contentSizeObservation = collectionView.observe(\.contentSize, options: .new) { [weak self] (cv, change) in
+                guard let self = self else { return }
+                
+                // If explicit height is set in JSON, ignore this (logic not shown for brevity, but easy to add)
+                // Otherwise, adapt to content:
+                
+                var targetHeight = cv.contentSize.height
+                if targetHeight == 0{
+                    targetHeight = 50
+                }
+                if self.collectionViewHeightConstraint == nil {
+                    self.collectionViewHeightConstraint = self.collectionView.heightAnchor.constraint(equalToConstant: targetHeight)
+                    self.collectionViewHeightConstraint?.isActive = true
+                } else if self.collectionViewHeightConstraint?.constant != targetHeight {
+                    // Determine if the change is significant to avoid layout loops
+                    if abs((self.collectionViewHeightConstraint?.constant ?? 0) - targetHeight) > 1 {
+                        self.collectionViewHeightConstraint?.constant = targetHeight
+                        
+                        // Notify parent to update if needed
+                        self.layoutIfNeeded()
+                    }
+                }
             }
-
-            // Ensure at least a minimum
-            return max(44, maxHeight)
         }
 
 }
