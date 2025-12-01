@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CanvasView: UIView {
+class CanvasView: UIView, Scrollable {
     
+    private let contentWrapper = UIView()
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
@@ -27,10 +28,10 @@ class CanvasView: UIView {
     
     private func setupSubViews() {
         guard let subElements = element.subElements else { return }
-        
+        makeContentScrollable(contentView: contentWrapper)
         for subElementId in subElements {
             if let subElement = elementsMap[subElementId] {
-                ElementRendererView.renderElement(parent: self, element: subElement, elementsMap: elementsMap)
+                ElementRendererView.renderElement(parent: contentWrapper, element: subElement, elementsMap: elementsMap)
             }
         }
     }

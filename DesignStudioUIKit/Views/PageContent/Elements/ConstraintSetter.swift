@@ -22,6 +22,8 @@ class ConstraintSetter {
         
         if hasBottom {
             child.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -1 * bottomMargin).isActive = true
+        }else{
+            child.bottomAnchor.constraint(lessThanOrEqualTo: parent.bottomAnchor).isActive = true
         }
         
         let hasLeading = hasLeadingConstraint(element: element)

@@ -7,10 +7,11 @@
 
 import UIKit
 
-class XYCoordinateView: UIView {
+class XYCoordinateView: UIView, Scrollable {
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
+    private let contentWrapper = UIView()
     private let xyContainerView = UIImageView()
     private let xyview = UIView()
     
@@ -29,26 +30,32 @@ class XYCoordinateView: UIView {
     
     private func setupView() {
 
-        xyContainerView.translatesAutoresizingMaskIntoConstraints = false
-        xyview.translatesAutoresizingMaskIntoConstraints = false
 
-        addSubview(xyContainerView)
-        addSubview(xyview)
-        
-//        self.contentInset = padding
-
-        // Apply styling
-        ViewDecorator.applyBackground(imageView: xyContainerView, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)
         ViewDecorator.applyBorder(view: self, element: element)
         ViewDecorator.applyOpacity(view: self, element: element)
         
-        ConstraintSetter.fillParent(parent: self, child: xyContainerView)
-        ConstraintSetter.fillParent(parent: xyContainerView, child: xyview)
+        setupContentWrapper()
         
-        setupSubElements()
+        makeContentScrollable(contentView: contentWrapper, padding: self.padding)
     }
+    
+    private func setupContentWrapper() {
+            contentWrapper.translatesAutoresizingMaskIntoConstraints = false
+            xyContainerView.translatesAutoresizingMaskIntoConstraints = false
+            xyview.translatesAutoresizingMaskIntoConstraints = false
+            
+            contentWrapper.addSubview(xyContainerView)
+            contentWrapper.addSubview(xyview)
+            
+            ViewDecorator.applyBackground(imageView: xyContainerView, element: element)
+            
+            ConstraintSetter.fillParent(parent: contentWrapper, child: xyContainerView)
+            ConstraintSetter.fillParent(parent: contentWrapper, child: xyview)
+            
+            setupSubElements()
+        }
     
     private func setupSubElements() {
         guard let subElements = element.subElements else { return }

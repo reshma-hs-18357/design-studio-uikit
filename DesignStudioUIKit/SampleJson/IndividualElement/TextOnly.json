@@ -4,7 +4,6 @@
           "elm_M-SvMxJ7RrOSrIY3nWIU7A": {
             "elementId": "elm_M-SvMxJ7RrOSrIY3nWIU7A",
             "elements": [
-              "elm_GgSyDCUyTxqxkfQxQIvpVw",
               "elm_IC4sPD0ABe_4rI72kvfNQA",
               "elm_GE3MoRrrP36bVb9kVzX53g"
             ],
@@ -22,8 +21,8 @@
               }
             }
           },
-          "elm_Pp_TfWztZF1Rp_jE6HSxnQ": {
-            "elementId": "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
+          "elm_GE3MoRrrP36bVb9kVzX53g": {
+            "elementId": "elm_GE3MoRrrP36bVb9kVzX53g",
             "type": "heading",
             "element": {
               "layout": {
@@ -33,14 +32,14 @@
                 },
                 "constraints": {
                   "top": {
-                    "is_enabled": false,
+                    "is_enabled": true,
                     "unit": "px",
-                    "value": ""
+                    "value": "64"
                   },
                   "left": {
-                    "is_enabled": false,
+                    "is_enabled": true,
                     "unit": "px",
-                    "value": ""
+                    "value": "136"
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -52,7 +51,7 @@
                     "unit": "px",
                     "value": ""
                   },
-                  "position": ""
+                  "position": "absolute"
                 },
                 "height": {
                   "unit": "auto",
@@ -60,7 +59,7 @@
                 }
               },
               "data": {
-                "element_name": "heading_2"
+                "element_name": "heading_1"
               },
               "style": {
                 "corner_radius": {
@@ -134,7 +133,7 @@
                     "src": "",
                     "builder_src": ""
                   },
-                  "color": "#5FF283"
+                  "color": ""
                 },
                 "active": {
                   "corner_radius": {
@@ -198,7 +197,7 @@
                     "value": "15"
                   },
                   "weight": "400",
-                  "family": "'Montserrat',sans-serif"
+                  "family": "'Lato',sans-serif"
                 }
               },
               "events": {
@@ -215,12 +214,19 @@
                   }
                 ]
               },
-              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
+              "content": "                                    <p>somthing with just auto auto&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(230, 230, 230); float:none; display:inline\">somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(193, 23, 23); float:none; display:inline\"></span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"></span></p>               <span style=\"color:rgb(18, 19, 43)\"></span>     "
             }
           },
-          "elm_GgSyDCUyTxqxkfQxQIvpVw": {
-            "elementId": "elm_GgSyDCUyTxqxkfQxQIvpVw",
-            "elements": [],
+          "elm_IC4sPD0ABe_4rI72kvfNQA": {
+            "elementId": "elm_IC4sPD0ABe_4rI72kvfNQA",
+            "elements": [
+              "elm_U0DnSHIfCoHPmvEWeD1SfA",
+              "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
+              "elm_kJ59Fx_4h46TpOTTtQSbaw",
+              "elm_t94iSGzcyt6lImBImyQ_xg",
+              "elm_sV9G7--kkuJLup8yOwVxuQ",
+              "elm_poSmW0KmIkc-eDBVgmGlgg"
+            ],
             "type": "vertical_flex",
             "element": {
               "layout": {
@@ -232,12 +238,12 @@
                   "top": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "64"
+                    "value": "157"
                   },
                   "left": {
                     "is_enabled": true,
                     "unit": "px",
-                    "value": "0"
+                    "value": "136"
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -245,9 +251,9 @@
                     "value": ""
                   },
                   "right": {
-                    "is_enabled": true,
+                    "is_enabled": false,
                     "unit": "px",
-                    "value": "0"
+                    "value": ""
                   },
                   "position": "absolute"
                 },
@@ -271,7 +277,7 @@
                 "padding": {
                   "unit": "px",
                   "is_even": true,
-                  "value": "0"
+                  "value": "5"
                 },
                 "hover": {
                   "corner_radius": {
@@ -326,8 +332,8 @@
                   "color": ""
                 },
                 "flex": {
-                  "align_items": "top",
-                  "gap": "0",
+                  "align_items": "topLeft",
+                  "gap": "16",
                   "wrap": "nowrap",
                   "direction": "column"
                 },
@@ -583,7 +589,203 @@
                   }
                 ]
               },
-              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
+              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
+            }
+          },
+          "elm_Pp_TfWztZF1Rp_jE6HSxnQ": {
+            "elementId": "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": ""
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_2"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#5FF283"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Montserrat',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
             }
           },
           "elm_kJ59Fx_4h46TpOTTtQSbaw": {
@@ -779,185 +981,7 @@
                   }
                 ]
               },
-              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
-            }
-          },
-          "elm_IC4sPD0ABe_4rI72kvfNQA": {
-            "elementId": "elm_IC4sPD0ABe_4rI72kvfNQA",
-            "elements": [
-              "elm_U0DnSHIfCoHPmvEWeD1SfA",
-              "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
-              "elm_kJ59Fx_4h46TpOTTtQSbaw",
-              "elm_t94iSGzcyt6lImBImyQ_xg"
-            ],
-            "type": "vertical_flex",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "px",
-                  "value": "300"
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "157"
-                  },
-                  "left": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "136"
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": "absolute"
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": ""
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "color": "",
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "5"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "flex": {
-                    "direction": ""
-                  },
-                  "opacity": ""
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": ""
-                },
-                "flex": {
-                  "align_items": "topLeft",
-                  "gap": "16",
-                  "wrap": "nowrap",
-                  "direction": "column"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "flex": {
-                    "direction": ""
-                  },
-                  "opacity": ""
-                },
-                "opacity": "100"
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              }
+              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
             }
           },
           "elm_t94iSGzcyt6lImBImyQ_xg": {
@@ -1151,11 +1175,11 @@
                   }
                 ]
               },
-              "content": "         \u003Cp\u003Etext 2:&nbsp;\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003Etext 2:&nbsp;\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003Etext 2:&nbsp;\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003C/span\u003E\u003C/p\u003E     "
+              "content": "         <p>text 2:&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span></span></p>     "
             }
           },
-          "elm_GE3MoRrrP36bVb9kVzX53g": {
-            "elementId": "elm_GE3MoRrrP36bVb9kVzX53g",
+          "elm_sV9G7--kkuJLup8yOwVxuQ": {
+            "elementId": "elm_sV9G7--kkuJLup8yOwVxuQ",
             "type": "heading",
             "element": {
               "layout": {
@@ -1165,14 +1189,14 @@
                 },
                 "constraints": {
                   "top": {
-                    "is_enabled": true,
+                    "is_enabled": false,
                     "unit": "px",
-                    "value": "64"
+                    "value": ""
                   },
                   "left": {
-                    "is_enabled": true,
+                    "is_enabled": false,
                     "unit": "px",
-                    "value": "136"
+                    "value": ""
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -1184,7 +1208,7 @@
                     "unit": "px",
                     "value": ""
                   },
-                  "position": "absolute"
+                  "position": ""
                 },
                 "height": {
                   "unit": "auto",
@@ -1192,7 +1216,7 @@
                 }
               },
               "data": {
-                "element_name": "heading_1"
+                "element_name": "heading_3"
               },
               "style": {
                 "corner_radius": {
@@ -1347,7 +1371,203 @@
                   }
                 ]
               },
-              "content": "                                    \u003Cp\u003Esomthing with just auto auto&nbsp;\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(230, 230, 230); float:none; display:inline\"\u003Esomthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(193, 23, 23); float:none; display:inline\"\u003E\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003E\u003C/span\u003E\u003C/p\u003E               \u003Cspan style=\"color:rgb(18, 19, 43)\"\u003E\u003C/span\u003E     "
+              "content": "         <p>text 2:&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span></span></p>     "
+            }
+          },
+          "elm_poSmW0KmIkc-eDBVgmGlgg": {
+            "elementId": "elm_poSmW0KmIkc-eDBVgmGlgg",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": ""
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_2"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#5FF283"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Montserrat',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
             }
           }
         },

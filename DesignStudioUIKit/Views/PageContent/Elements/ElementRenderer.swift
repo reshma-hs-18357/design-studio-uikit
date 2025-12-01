@@ -15,8 +15,8 @@ struct ElementRendererView {
             
         case .canvas:
             let rendered =  CanvasView(element: element, elementsMap: elementsMap)
-            parent.addSubview(rendered)
             rendered.translatesAutoresizingMaskIntoConstraints = false
+            parent.addSubview(rendered)
             ConstraintSetter.fillParent(parent: parent, child: rendered)
             
             
