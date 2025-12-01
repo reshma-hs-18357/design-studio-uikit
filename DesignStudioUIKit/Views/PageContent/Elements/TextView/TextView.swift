@@ -41,6 +41,7 @@ class TextView: UIImageView {
         textView.isScrollEnabled = (element.elementDetail?.layout?.width?.unit == .auto  || element.elementDetail?.layout?.height?.unit == .auto ) ? false : true
         //textView.textContainer.maximumNumberOfLines = 0
         textView.backgroundColor = .red.withAlphaComponent(0.4)
+        
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -55,11 +56,12 @@ class TextView: UIImageView {
 //            textView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
 //        }
 //        
-//        if element.elementDetail?.layout?.height?.unit == .auto {
+        if element.elementDetail?.layout?.width?.unit == .auto {
+          //  textView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 //            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
 //            textViewHeightConstraint?.isActive = true
 //            calcContentSize(child: textView)
-//        }
+        }
     }
     
 //    private func calcContentSize(child: UITextView)  {

@@ -1,10 +1,12 @@
 {
     "page_content" : {
         "elements": {
-          "elm_g6fAo9iKQaCkrk74kp4DLA": {
-            "elementId": "elm_g6fAo9iKQaCkrk74kp4DLA",
+          "elm_M-SvMxJ7RrOSrIY3nWIU7A": {
+            "elementId": "elm_M-SvMxJ7RrOSrIY3nWIU7A",
             "elements": [
-              "elm_KIbyiOO_SpKTTCm2GPGwfg"
+              "elm_GgSyDCUyTxqxkfQxQIvpVw",
+              "elm_IC4sPD0ABe_4rI72kvfNQA",
+              "elm_GE3MoRrrP36bVb9kVzX53g"
             ],
             "type": "canvas",
             "element": {
@@ -20,25 +22,25 @@
               }
             }
           },
-          "elm_KIbyiOO_SpKTTCm2GPGwfg": {
-            "elementId": "elm_KIbyiOO_SpKTTCm2GPGwfg",
+          "elm_Pp_TfWztZF1Rp_jE6HSxnQ": {
+            "elementId": "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
             "type": "heading",
             "element": {
               "layout": {
                 "width": {
-                  "unit": "px",
-                  "value": "300"
+                  "unit": "auto",
+                  "value": ""
                 },
                 "constraints": {
                   "top": {
-                    "is_enabled": true,
+                    "is_enabled": false,
                     "unit": "px",
-                    "value": "82"
+                    "value": ""
                   },
                   "left": {
-                    "is_enabled": true,
+                    "is_enabled": false,
                     "unit": "px",
-                    "value": "107"
+                    "value": ""
                   },
                   "bottom": {
                     "is_enabled": false,
@@ -50,15 +52,15 @@
                     "unit": "px",
                     "value": ""
                   },
-                  "position": "absolute"
+                  "position": ""
                 },
                 "height": {
-                  "unit": "px",
-                  "value": "100"
+                  "unit": "auto",
+                  "value": ""
                 }
               },
               "data": {
-                "element_name": "heading_3"
+                "element_name": "heading_2"
               },
               "style": {
                 "corner_radius": {
@@ -66,13 +68,12 @@
                   "value": ""
                 },
                 "border": {
-                  "color": "#000000",
-                  "thickness": "2"
+                  "thickness": ""
                 },
                 "padding": {
                   "unit": "px",
                   "is_even": true,
-                  "value": "20"
+                  "value": "0"
                 },
                 "hover": {
                   "corner_radius": {
@@ -130,10 +131,944 @@
                 },
                 "background": {
                   "image": {
-                    "size": "fill",
-                    "src": "appbuilder/images/designstudio/static/ptrn_1.png",
-                    "builder_src": "appbuilder/images/designstudio/static/ptrn_1.png",
-                    "position": "center"
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#5FF283"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Montserrat',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
+            }
+          },
+          "elm_GgSyDCUyTxqxkfQxQIvpVw": {
+            "elementId": "elm_GgSyDCUyTxqxkfQxQIvpVw",
+            "elements": [],
+            "type": "vertical_flex",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "px",
+                  "value": "300"
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "64"
+                  },
+                  "left": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "0"
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "0"
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": ""
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "color": "",
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "flex": {
+                    "direction": ""
+                  },
+                  "opacity": ""
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": ""
+                },
+                "flex": {
+                  "align_items": "top",
+                  "gap": "0",
+                  "wrap": "nowrap",
+                  "direction": "column"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "flex": {
+                    "direction": ""
+                  },
+                  "opacity": ""
+                },
+                "opacity": "100"
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              }
+            }
+          },
+          "elm_U0DnSHIfCoHPmvEWeD1SfA": {
+            "elementId": "elm_U0DnSHIfCoHPmvEWeD1SfA",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  }
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_2"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#5FF283"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Montserrat',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
+            }
+          },
+          "elm_kJ59Fx_4h46TpOTTtQSbaw": {
+            "elementId": "elm_kJ59Fx_4h46TpOTTtQSbaw",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": ""
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_2"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": "#5FF283"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Montserrat',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "          \u003Cp\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.END\u003C/span\u003E\u003C/p\u003E        "
+            }
+          },
+          "elm_IC4sPD0ABe_4rI72kvfNQA": {
+            "elementId": "elm_IC4sPD0ABe_4rI72kvfNQA",
+            "elements": [
+              "elm_U0DnSHIfCoHPmvEWeD1SfA",
+              "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
+              "elm_kJ59Fx_4h46TpOTTtQSbaw",
+              "elm_t94iSGzcyt6lImBImyQ_xg"
+            ],
+            "type": "vertical_flex",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "px",
+                  "value": "300"
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "157"
+                  },
+                  "left": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "136"
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": ""
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "color": "",
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "5"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "flex": {
+                    "direction": ""
+                  },
+                  "opacity": ""
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": ""
+                },
+                "flex": {
+                  "align_items": "topLeft",
+                  "gap": "16",
+                  "wrap": "nowrap",
+                  "direction": "column"
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "flex": {
+                    "direction": ""
+                  },
+                  "opacity": ""
+                },
+                "opacity": "100"
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              }
+            }
+          },
+          "elm_t94iSGzcyt6lImBImyQ_xg": {
+            "elementId": "elm_t94iSGzcyt6lImBImyQ_xg",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px"
+                  },
+                  "left": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  }
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_3"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
                   },
                   "color": ""
                 },
@@ -216,13 +1151,209 @@
                   }
                 ]
               },
-              "content": "\u003Cp\u003ETo create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.To create a random image from your system in Swift, you typically need to have a collection of images available within your application's assets or a specific directory.&nbsp;You can then randomly select one of these images.\u003C/p\u003E"
+              "content": "         \u003Cp\u003Etext 2:&nbsp;\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003Etext 2:&nbsp;\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003Etext 2:&nbsp;\u003C/span\u003E\u003Cspan style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\"\u003EOur solutions make production faster and cheaper. Contact us for more information.\u003C/span\u003E\u003C/span\u003E\u003C/p\u003E     "
+            }
+          },
+          "elm_GE3MoRrrP36bVb9kVzX53g": {
+            "elementId": "elm_GE3MoRrrP36bVb9kVzX53g",
+            "type": "heading",
+            "element": {
+              "layout": {
+                "width": {
+                  "unit": "auto",
+                  "value": ""
+                },
+                "constraints": {
+                  "top": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "64"
+                  },
+                  "left": {
+                    "is_enabled": true,
+                    "unit": "px",
+                    "value": "136"
+                  },
+                  "bottom": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "right": {
+                    "is_enabled": false,
+                    "unit": "px",
+                    "value": ""
+                  },
+                  "position": "absolute"
+                },
+                "height": {
+                  "unit": "auto",
+                  "value": ""
+                }
+              },
+              "data": {
+                "element_name": "heading_1"
+              },
+              "style": {
+                "corner_radius": {
+                  "preset": "preset1",
+                  "value": ""
+                },
+                "border": {
+                  "thickness": ""
+                },
+                "padding": {
+                  "unit": "px",
+                  "is_even": true,
+                  "value": "0"
+                },
+                "hover": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "shadow": {
+                  "preset": ""
+                },
+                "background": {
+                  "image": {
+                    "src": "",
+                    "builder_src": ""
+                  },
+                  "color": ""
+                },
+                "active": {
+                  "corner_radius": {
+                    "preset": "",
+                    "value": ""
+                  },
+                  "border": {
+                    "thickness": ""
+                  },
+                  "padding": {
+                    "top": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "left": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "bottom": {
+                      "unit": "",
+                      "value": ""
+                    },
+                    "is_even": "",
+                    "right": {
+                      "unit": "",
+                      "value": ""
+                    }
+                  },
+                  "shadow": {
+                    "preset": ""
+                  },
+                  "background": {
+                    "image": {
+                      "src": "",
+                      "builder_src": ""
+                    },
+                    "color": ""
+                  },
+                  "align": {
+                    "horizontal": "",
+                    "vertical": ""
+                  },
+                  "opacity": "",
+                  "font": {
+                    "color": "",
+                    "size": {
+                      "value": ""
+                    },
+                    "weight": "",
+                    "family": ""
+                  }
+                },
+                "align": {
+                  "horizontal": "left",
+                  "vertical": "flex-start"
+                },
+                "opacity": "100",
+                "font": {
+                  "color": "#12132B",
+                  "size": {
+                    "value": "15"
+                  },
+                  "weight": "400",
+                  "family": "'Lato',sans-serif"
+                }
+              },
+              "events": {
+                "ondblclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ],
+                "onclick": [
+                  {
+                    "action": "",
+                    "params": ""
+                  }
+                ]
+              },
+              "content": "                                    \u003Cp\u003Esomthing with just auto auto&nbsp;\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(230, 230, 230); float:none; display:inline\"\u003Esomthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(193, 23, 23); float:none; display:inline\"\u003E\u003C/span\u003E\u003Cspan style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"\u003E\u003C/span\u003E\u003C/p\u003E               \u003Cspan style=\"color:rgb(18, 19, 43)\"\u003E\u003C/span\u003E     "
             }
           }
         },
         "type": "page",
         "sections": [
-          "elm_g6fAo9iKQaCkrk74kp4DLA"
+          "elm_M-SvMxJ7RrOSrIY3nWIU7A"
         ]
       }
 }
