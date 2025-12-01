@@ -38,7 +38,7 @@ class XYCoordinateView: UIView, Scrollable {
         
         setupContentWrapper()
         
-        makeContentScrollable(contentView: contentWrapper, padding: self.padding)
+//        makeContentScrollable(contentView: contentWrapper, padding: self.padding)
     }
     
     private func setupContentWrapper() {
@@ -46,13 +46,18 @@ class XYCoordinateView: UIView, Scrollable {
             xyContainerView.translatesAutoresizingMaskIntoConstraints = false
             xyview.translatesAutoresizingMaskIntoConstraints = false
             
-            contentWrapper.addSubview(xyContainerView)
-            contentWrapper.addSubview(xyview)
+//            contentWrapper.addSubview(xyContainerView)
+//            contentWrapper.addSubview(xyview)
+            addSubview(xyContainerView)
+            xyContainerView.addSubview(xyview)
             
             ViewDecorator.applyBackground(imageView: xyContainerView, element: element)
             
-            ConstraintSetter.fillParent(parent: contentWrapper, child: xyContainerView)
-            ConstraintSetter.fillParent(parent: contentWrapper, child: xyview)
+//            ConstraintSetter.fillParent(parent: contentWrapper, child: xyContainerView)
+//            ConstraintSetter.fillParent(parent: contentWrapper, child: xyview)
+        
+            ConstraintSetter.fillParent(parent: self, child: xyContainerView)
+            ConstraintSetter.fillParent(parent: xyContainerView, child: xyview)
             
             setupSubElements()
         }

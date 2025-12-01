@@ -13,24 +13,39 @@ class ViewDecorator {
     
     static func applyBackground(imageView: UIImageView, element : ElementViewModel){
         
-        imageView.backgroundColor = backgroundColor(element: element)
         imageView.contentMode = ViewDecorator.backgroundImageContentMode(element: element)
-        if let background = element.elementDetail?.style?.background,
-           let imageSrc = background.image?.src,
-           !imageSrc.isEmpty {
-            
-            let rawURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(imageSrc)"
-            if let encodedURL = rawURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-               let url = URL(string: encodedURL) {
-                URLSession.shared.dataTask(with: url) { data, _, error in
-                    guard error == nil, let data = data, let image = UIImage(data: data) else { return }
-                    DispatchQueue.main.async {
-                        imageView.image = image
-                    }
-                }.resume()
-            }
-        }
+        guard let imageSrc = element.elementDetail?.style?.background?.image?.src,
+               !imageSrc.isEmpty else {
+             return
+         }
+        let rawURL = "https://dockerdev19.csez.zohocorpin.com/creator/\(staticImageID)/\(imageSrc)"
+          
+          guard
+              let encodedURL = rawURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: encodedURL)
+          else {
+              return
+          }
         
+        URLSession.shared.dataTask(with: url) { data, _, error in
+               guard error == nil,
+                     let data = data,
+                     let image = UIImage(data: data) else {
+                   return
+               }
+               DispatchQueue.main.async {
+                   imageView.image = image
+               }
+           }.resume()
+        
+    }
+    
+    static func applyBackgroundColor(view: UIView, element: ElementViewModel) {
+        if let hex = element.elementDetail?.style?.background?.color, !hex.isEmpty {
+            view.backgroundColor = UIColor.from(hex)
+        } else {
+            view.backgroundColor = .clear
+        }
     }
     
     static  func applyCornerRadius (view : UIView, element: ElementViewModel) {
@@ -117,16 +132,16 @@ class ViewDecorator {
         if let value = element.elementDetail?.style?.background?.image?.size {
             switch value {
             case .fill:
-                return .scaleToFill
+                return .scaleAspectFill
             case .fit:
                 return .scaleAspectFit
             case .stretch:
-                return .scaleToFill
+                return .scaleAspectFill
             default:
                 return .scaleAspectFill
             }
         }
-        return .scaleAspectFill
+        return .scaleAspectFit
     }
         
     

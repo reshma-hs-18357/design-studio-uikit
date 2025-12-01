@@ -38,10 +38,7 @@ class TextView: UIImageView {
         textView.backgroundColor = .clear
         textView.bounces = false
         textView.textContainerInset =  padding
-        textView.isScrollEnabled = (element.elementDetail?.layout?.width?.unit == .auto  || element.elementDetail?.layout?.height?.unit == .auto ) ? false : true
-        //textView.textContainer.maximumNumberOfLines = 0
-        textView.backgroundColor = .red.withAlphaComponent(0.4)
-        
+        textView.isScrollEnabled = shouldEnableScroll
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -111,7 +108,28 @@ class TextView: UIImageView {
     
     }
 //    
+//    }
+//   
    
+    private var shouldEnableScroll: Bool {
+        guard let width = element.elementDetail?.layout?.width,
+              let height = element.elementDetail?.layout?.height else {
+            return false
+        }
+        if width.unit == .auto || height.unit == .auto {
+             return false
+         }
+
+        if width.unit == .percent,
+              height.unit == .percent,
+           Double(width.value ?? "0") ?? 0.0 <= 100.0,
+           Double(height.value ?? "0") ?? 0.0 <= 100.0 {
+               return false
+           }
+        return true
+        
+        
+    }
     
     private func cleanContent(_ content: String) -> String {
          guard let data = content.data(using: .utf8) else {

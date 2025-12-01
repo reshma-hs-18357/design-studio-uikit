@@ -7,10 +7,11 @@
 
 import UIKit
 
-class VerticalView: UIImageView {
+class VerticalView: UIView {
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
+    private let verticalBGView = UIImageView()
     private let verticalStackView = UIStackView()
     
     init(element: ElementViewModel, elementsMap: [String : ElementViewModel]) {
@@ -27,18 +28,19 @@ class VerticalView: UIImageView {
     }
     
     private func setupView() {
-        
-        verticalStackView.backgroundColor = .brown.withAlphaComponent(0.5)
+        verticalBGView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(verticalStackView)
+        
+        addSubview(verticalBGView)
+        verticalBGView.addSubview(verticalStackView)
     
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
         verticalStackView.alignment = subElementsAlignment
         verticalStackView.distribution = .fill
         
-        
-        ViewDecorator.applyBackground(imageView: self, element: element)
+        ViewDecorator.applyBackgroundColor(view: self, element: element)
+        ViewDecorator.applyBackground(imageView: verticalBGView, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)
         ViewDecorator.applyBorder(view: self, element: element)

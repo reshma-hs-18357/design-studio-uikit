@@ -43,16 +43,28 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				SampleJson/IndividualElement/CombinationLayout.json,
 			);
 			target = 5DAAFC2E2EC5DF4C00A68C9E /* DesignStudioUIKit */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		5DF1C4702EDD6DBD001E11BA /* Exceptions for "DesignStudioUIKit" folder in "Compile Sources" phase from "DesignStudioUIKit" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 5DAAFC2B2EC5DF4C00A68C9E /* Sources */;
+			membershipExceptions = (
+				SampleJson/IndividualElement/CombinationLayout.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5DAAFC312EC5DF4C00A68C9E /* DesignStudioUIKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				5DAAFC572EC5DF4E00A68C9E /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKit" target */,
+				5DF1C4702EDD6DBD001E11BA /* Exceptions for "DesignStudioUIKit" folder in "Compile Sources" phase from "DesignStudioUIKit" target */,
 				5D0FFD532ED3103400619EEA /* Exceptions for "DesignStudioUIKit" folder in "DesignStudioUIKitTests" target */,
 			);
 			path = DesignStudioUIKit;

@@ -41,10 +41,6 @@ class ImageView: UIImageView {
     
     private func setupView() {
         
-//        self.backgroundColor = .blue.withAlphaComponent(0.6)
-        imageContainerView.backgroundColor = .blue.withAlphaComponent(0.3)
-//        imageView.backgroundColor = .blue.withAlphaComponent(0.1)
-        
         imageContainerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = imageContentMode

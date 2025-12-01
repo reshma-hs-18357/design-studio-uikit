@@ -15,7 +15,7 @@ enum Templates: String, CaseIterable {
     case logisticsVendor = "Logistics Vendor"
     case test = "Auto Layout"
     case individual = "Individual Element"
-//    case sampleJson = "Sample Json"
+    case demo = "Demo"
     
     var pageTypes: [(pageName: String, jsonSource: String)] {
         switch self {
@@ -92,6 +92,11 @@ enum Templates: String, CaseIterable {
                 (pageName: "Template Test Without HS", jsonSource: "TemplateWithoutHS"),
                 (pageName: "More Vertical Test", jsonSource: "MoreVerticalText"),
             ]
+        case .demo:
+            return [
+                (pageName: "Vertical Only Demo", jsonSource: "VerticalOnlyDemo"),
+            ]
+            
         }
     }
 }
