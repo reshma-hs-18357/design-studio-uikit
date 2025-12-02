@@ -7,11 +7,12 @@
 
 import UIKit
 
-class VerticalView: UIView {
+class VerticalView: UIView, Scrollable {
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
-    private let verticalBGView = UIImageView()
+    private let contentWrapper = UIView()
+    private let verticalContainerView = UIImageView()
     private let verticalStackView = UIStackView()
     
     init(element: ElementViewModel, elementsMap: [String : ElementViewModel]) {
@@ -19,7 +20,7 @@ class VerticalView: UIView {
         self.elementsMap = elementsMap
         super.init(frame: .zero)
         setupView()
-        clipsToBounds = true
+//        clipsToBounds = true
     }
     
     
@@ -28,26 +29,36 @@ class VerticalView: UIView {
     }
     
     private func setupView() {
-        verticalBGView.translatesAutoresizingMaskIntoConstraints = false
+
+        ViewDecorator.applyBackgroundColor(view: self, element: element)
+//        ViewDecorator.applyBackground(imageView: verticalContainerView, element: element)
+        ViewDecorator.applyCornerRadius(view: self, element: element)
+        ViewDecorator.applyShadow(view: self, element: element)
+        ViewDecorator.applyBorder(view: self, element: element)
+        ViewDecorator.applyOpacity(view: self, element: element)
+
+        setupContentWrapper()
+        
+        makeContentScrollable(contentView: contentWrapper, padding: padding)
+    }
+    
+    private func setupContentWrapper() {
+        contentWrapper.translatesAutoresizingMaskIntoConstraints = false
+        verticalContainerView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(verticalBGView)
-        verticalBGView.addSubview(verticalStackView)
-    
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
         verticalStackView.alignment = subElementsAlignment
         verticalStackView.distribution = .fill
         
-        ViewDecorator.applyBackgroundColor(view: self, element: element)
-        ViewDecorator.applyBackground(imageView: verticalBGView, element: element)
-        ViewDecorator.applyCornerRadius(view: self, element: element)
-        ViewDecorator.applyShadow(view: self, element: element)
-        ViewDecorator.applyBorder(view: self, element: element)
-        ViewDecorator.applyOpacity(view: self, element: element)
+//        contentWrapper.addSubview(verticalContainerView)
+        contentWrapper.addSubview(verticalStackView)
         
-        ConstraintSetter.fillParent(parent: self, child: verticalStackView, element: element)
-        setupSubElements()
+//        ConstraintSetter.fillParent(parent: contentWrapper, child: verticalContainerView)
+        ConstraintSetter.fillParent(parent: contentWrapper, child: verticalStackView)
+        
+//        setupSubElements()
     }
     
     private func setupSubElements() {
@@ -59,8 +70,6 @@ class VerticalView: UIView {
             }
         }
     }
-    
-
     
     private var gap: CGFloat {
        return Double(element.elementDetail?.style?.flex?.gap ?? "0") ?? 0

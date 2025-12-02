@@ -39,6 +39,9 @@ class ConstraintSetter {
         if hasTrailing {
             child.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -1 * trailmargin).isActive = true
         }
+        else {
+            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
+        }
         
         applyHeightConstraints(parent: parent, child: child, element: element)
         

@@ -91,10 +91,12 @@ enum Templates: String, CaseIterable {
                 (pageName: "Template Test", jsonSource: "TemplateText"),
                 (pageName: "Template Test Without HS", jsonSource: "TemplateWithoutHS"),
                 (pageName: "More Vertical Test", jsonSource: "MoreVerticalText"),
+                (pageName: "Horizontal Test", jsonSource: "HorizontalTest"),
             ]
         case .demo:
             return [
                 (pageName: "Vertical Only Demo", jsonSource: "VerticalOnlyDemo"),
+                (pageName: "Horizontal Only Demo", jsonSource: "HorizontalOnlyDemo"),
             ]
             
         }
