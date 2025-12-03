@@ -39,18 +39,13 @@ extension Scrollable {
             contentView.widthAnchor.constraint(equalToConstant: 500)
         ])
         
-<<<<<<< HEAD:DesignStudioUIKit/Views/PageContent/Protocols.swift
+
         let widthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
         widthConstraint.isActive = true
         widthConstraint.priority = .defaultLow
         
         let heightConstraint = scrollView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
         heightConstraint.priority = .defaultLow
-        heightConstraint.isActive = true
-=======
-//        let widthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
-//        widthConstraint.isActive = true
->>>>>>> ds_primitive_elements:DesignStudioUIKit/Views/PageContent/Protocols/Protocols.swift
-               
+        heightConstraint.isActive = true               
     }
 }

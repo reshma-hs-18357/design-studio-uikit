@@ -29,20 +29,20 @@ class VerticalView: UIView, Scrollable {
     }
     
     private func setupView() {
-
+        
         ViewDecorator.applyBackgroundColor(view: self, element: element)
-//        ViewDecorator.applyBackground(imageView: verticalContainerView, element: element)
+        //        ViewDecorator.applyBackground(imageView: verticalContainerView, element: element)
         ViewDecorator.applyCornerRadius(view: self, element: element)
         ViewDecorator.applyShadow(view: self, element: element)
         ViewDecorator.applyBorder(view: self, element: element)
         ViewDecorator.applyOpacity(view: self, element: element)
-
+        
         setupContentWrapper()
         
         makeContentScrollable(contentView: verticalStackView)
-        addSubview(verticalBGView)
-       // addSubview(verticalStackView)
-    
+       // addSubview(verticalBGView)
+        // addSubview(verticalStackView)
+    }
     private func setupContentWrapper() {
         contentWrapper.translatesAutoresizingMaskIntoConstraints = false
         verticalContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +59,7 @@ class VerticalView: UIView, Scrollable {
 //        ConstraintSetter.fillParent(parent: contentWrapper, child: verticalContainerView)
         ConstraintSetter.fillParent(parent: contentWrapper, child: verticalStackView)
         
-        ConstraintSetter.fillParent(parent: self, child: verticalBGView, element: element)
+        //ConstraintSetter.fillParent(parent: self, child: verticalBGView, element: element)
         //ConstraintSetter.fillParent(parent: self, child: verticalStackView, element: element)
         setupSubElements()
     }

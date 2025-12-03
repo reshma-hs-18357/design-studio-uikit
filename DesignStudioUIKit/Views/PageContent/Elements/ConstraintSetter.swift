@@ -45,9 +45,7 @@ class ConstraintSetter {
         }else {
             child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
         }
-        else {
-            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
-        }
+        
         
         applyHeightConstraints(parent: parent, child: child, element: element)
         
