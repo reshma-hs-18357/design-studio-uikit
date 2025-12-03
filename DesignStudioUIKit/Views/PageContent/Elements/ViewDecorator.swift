@@ -8,9 +8,7 @@
 import UIKit
 
 class ViewDecorator {
-    
-    private static let backgroundViewTag = 900_001
-    
+        
     static func applyBackground(imageView: UIImageView, element : ElementViewModel){
         
         imageView.contentMode = ViewDecorator.backgroundImageContentMode(element: element)

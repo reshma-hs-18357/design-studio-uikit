@@ -70,8 +70,7 @@ class PageContentViewController: UIViewController {
             errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             errorView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
-            contentContainer.topAnchor.constraint(equalTo: view.topAnchor),
-            contentContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            contentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),            contentContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             contentContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
@@ -96,7 +95,7 @@ class PageContentViewController: UIViewController {
 
     private func renderContent(root: ElementViewModel) {
         contentContainer.subviews.forEach { $0.removeFromSuperview() }
-        ElementRendererView.renderElement(parent: self.view, element: root, elementsMap: elementsMap)
+        ElementRendererView.renderElement(parent: contentContainer, element: root, elementsMap: elementsMap)
         view.layoutIfNeeded()
     }
 

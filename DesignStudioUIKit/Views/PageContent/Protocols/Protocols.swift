@@ -15,8 +15,8 @@ extension Scrollable {
     func makeContentScrollable(contentView: UIView, padding: UIEdgeInsets = .zero) {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-//        scrollView.backgroundColor = UIColor.green
-//        contentView.backgroundColor = UIColor.blue
+        scrollView.backgroundColor = UIColor.green
+        contentView.backgroundColor = UIColor.red
         self.addSubview(scrollView)
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,9 +34,12 @@ extension Scrollable {
             contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: padding.top),
             contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -padding.bottom),
             contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor, constant: padding.left),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor, constant: -padding.right)
+            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor, constant: -padding.right),
+            contentView.heightAnchor.constraint(equalToConstant: 2000),
+            contentView.widthAnchor.constraint(equalToConstant: 500)
         ])
         
+<<<<<<< HEAD:DesignStudioUIKit/Views/PageContent/Protocols.swift
         let widthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
         widthConstraint.isActive = true
         widthConstraint.priority = .defaultLow
@@ -44,6 +47,10 @@ extension Scrollable {
         let heightConstraint = scrollView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
         heightConstraint.priority = .defaultLow
         heightConstraint.isActive = true
+=======
+//        let widthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
+//        widthConstraint.isActive = true
+>>>>>>> ds_primitive_elements:DesignStudioUIKit/Views/PageContent/Protocols/Protocols.swift
                
     }
 }
