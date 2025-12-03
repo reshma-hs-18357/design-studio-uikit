@@ -54,7 +54,7 @@ class HorizontalView: ContentHuggingCollectionView {
     }
     
     private lazy var autoHeight = horizontalElement.elementDetail?.layout?.height?.unit == .auto
-    private lazy var shouldWrapToNextRow: Bool = true
+    private lazy var shouldWrapToNextRow: Bool = horizontalElement.elementDetail?.style?.flex?.wrap != .nowrap
     private lazy var constantHeight: CGFloat = {
         if let heightValue = horizontalElement.elementDetail?.layout?.height?.value {
             return CGFloat(Double(heightValue) ?? 150.0)
