@@ -39,6 +39,14 @@ class ImageView: UIImageView {
         imageLoadTask?.cancel()
     }
     
+    override var intrinsicContentSize: CGSize {
+            if let image = imageView.image {
+                return image.size
+            }
+            // Return a default placeholder size so the cell has dimension while loading
+            return CGSize(width: 100, height: 100)
+        }
+    
     private func setupView() {
         
         imageContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -185,10 +193,33 @@ class ImageView: UIImageView {
                 }
                 self.imageView.image = image
                 self.showImage()
+                self.updateAspectRatio(for: image)
             }
         }
         imageLoadTask?.resume()
     }
+    
+    private var aspectRatioConstraint: NSLayoutConstraint?
+    
+    private func updateAspectRatio(for image: UIImage) {
+            self.invalidateIntrinsicContentSize()
+            
+            if let existing = aspectRatioConstraint {
+                self.removeConstraint(existing)
+            }
+            
+            let aspectRatio = image.size.width / image.size.height
+            
+            aspectRatioConstraint = self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: aspectRatio)
+            
+         
+            aspectRatioConstraint?.priority = .defaultHigh
+            aspectRatioConstraint?.isActive = true
+            
+          
+            self.superview?.setNeedsLayout()
+            self.superview?.layoutIfNeeded()
+        }
     
     private func showLoading() {
         imageView.isHidden = true
