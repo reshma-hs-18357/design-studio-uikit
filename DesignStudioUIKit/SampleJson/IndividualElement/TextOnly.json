@@ -1,1580 +1,793 @@
 {
-    "page_content" : {
-        "elements": {
-          "elm_M-SvMxJ7RrOSrIY3nWIU7A": {
-            "elementId": "elm_M-SvMxJ7RrOSrIY3nWIU7A",
-            "elements": [
-              "elm_IC4sPD0ABe_4rI72kvfNQA",
-              "elm_GE3MoRrrP36bVb9kVzX53g"
-            ],
-            "type": "canvas",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "%",
-                  "value": "100"
-                },
-                "height": {
-                  "unit": "%",
-                  "value": "100"
-                }
-              }
-            }
-          },
-          "elm_GE3MoRrrP36bVb9kVzX53g": {
-            "elementId": "elm_GE3MoRrrP36bVb9kVzX53g",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "64"
-                  },
-                  "left": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "136"
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": "absolute"
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_1"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": ""
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Lato',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "                                    <p>somthing with just auto auto&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(230, 230, 230); float:none; display:inline\">somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;somthing with just auto auto&nbsp;</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(193, 23, 23); float:none; display:inline\"></span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\"></span></p>               <span style=\"color:rgb(18, 19, 43)\"></span>     "
-            }
-          },
-          "elm_IC4sPD0ABe_4rI72kvfNQA": {
-            "elementId": "elm_IC4sPD0ABe_4rI72kvfNQA",
-            "elements": [
-              "elm_U0DnSHIfCoHPmvEWeD1SfA",
-              "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
-              "elm_kJ59Fx_4h46TpOTTtQSbaw",
-              "elm_t94iSGzcyt6lImBImyQ_xg",
-              "elm_sV9G7--kkuJLup8yOwVxuQ",
-              "elm_poSmW0KmIkc-eDBVgmGlgg"
-            ],
-            "type": "vertical_flex",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "px",
-                  "value": "300"
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "157"
-                  },
-                  "left": {
-                    "is_enabled": true,
-                    "unit": "px",
-                    "value": "136"
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": "absolute"
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": ""
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "color": "",
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "5"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "flex": {
-                    "direction": ""
-                  },
-                  "opacity": ""
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": ""
-                },
-                "flex": {
-                  "align_items": "topLeft",
-                  "gap": "16",
-                  "wrap": "nowrap",
-                  "direction": "column"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "flex": {
-                    "direction": ""
-                  },
-                  "opacity": ""
-                },
-                "opacity": "100"
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              }
-            }
-          },
-          "elm_U0DnSHIfCoHPmvEWeD1SfA": {
-            "elementId": "elm_U0DnSHIfCoHPmvEWeD1SfA",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  }
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_2"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": "#5FF283"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Montserrat',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
-            }
-          },
-          "elm_Pp_TfWztZF1Rp_jE6HSxnQ": {
-            "elementId": "elm_Pp_TfWztZF1Rp_jE6HSxnQ",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": ""
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_2"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": "#5FF283"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Montserrat',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
-            }
-          },
-          "elm_kJ59Fx_4h46TpOTTtQSbaw": {
-            "elementId": "elm_kJ59Fx_4h46TpOTTtQSbaw",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": ""
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_2"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": "#5FF283"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Montserrat',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
-            }
-          },
-          "elm_t94iSGzcyt6lImBImyQ_xg": {
-            "elementId": "elm_t94iSGzcyt6lImBImyQ_xg",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": true,
-                    "unit": "px"
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  }
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_3"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": ""
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Lato',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "         <p>text 2:&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span></span></p>     "
-            }
-          },
-          "elm_sV9G7--kkuJLup8yOwVxuQ": {
-            "elementId": "elm_sV9G7--kkuJLup8yOwVxuQ",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": ""
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_3"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": ""
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Lato',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "         <p>text 2:&nbsp;<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Lato, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255, 255, 255); display:inline !important; float:none\">text 2:&nbsp;</span><span style=\"margin:0px; padding:0px; color:rgb(18, 19, 43); font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; font-family:Montserrat, sans-serif; background-color:rgb(95, 242, 131); float:none; display:inline !important\">Our solutions make production faster and cheaper. Contact us for more information.</span></span></p>     "
-            }
-          },
-          "elm_poSmW0KmIkc-eDBVgmGlgg": {
-            "elementId": "elm_poSmW0KmIkc-eDBVgmGlgg",
-            "type": "heading",
-            "element": {
-              "layout": {
-                "width": {
-                  "unit": "auto",
-                  "value": ""
-                },
-                "constraints": {
-                  "top": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "left": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "bottom": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "right": {
-                    "is_enabled": false,
-                    "unit": "px",
-                    "value": ""
-                  },
-                  "position": ""
-                },
-                "height": {
-                  "unit": "auto",
-                  "value": ""
-                }
-              },
-              "data": {
-                "element_name": "heading_2"
-              },
-              "style": {
-                "corner_radius": {
-                  "preset": "preset1",
-                  "value": ""
-                },
-                "border": {
-                  "thickness": ""
-                },
-                "padding": {
-                  "unit": "px",
-                  "is_even": true,
-                  "value": "0"
-                },
-                "hover": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "shadow": {
-                  "preset": ""
-                },
-                "background": {
-                  "image": {
-                    "src": "",
-                    "builder_src": ""
-                  },
-                  "color": "#5FF283"
-                },
-                "active": {
-                  "corner_radius": {
-                    "preset": "",
-                    "value": ""
-                  },
-                  "border": {
-                    "thickness": ""
-                  },
-                  "padding": {
-                    "top": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "left": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "bottom": {
-                      "unit": "",
-                      "value": ""
-                    },
-                    "is_even": "",
-                    "right": {
-                      "unit": "",
-                      "value": ""
-                    }
-                  },
-                  "shadow": {
-                    "preset": ""
-                  },
-                  "background": {
-                    "image": {
-                      "src": "",
-                      "builder_src": ""
-                    },
-                    "color": ""
-                  },
-                  "align": {
-                    "horizontal": "",
-                    "vertical": ""
-                  },
-                  "opacity": "",
-                  "font": {
-                    "color": "",
-                    "size": {
-                      "value": ""
-                    },
-                    "weight": "",
-                    "family": ""
-                  }
-                },
-                "align": {
-                  "horizontal": "left",
-                  "vertical": "flex-start"
-                },
-                "opacity": "100",
-                "font": {
-                  "color": "#12132B",
-                  "size": {
-                    "value": "15"
-                  },
-                  "weight": "400",
-                  "family": "'Montserrat',sans-serif"
-                }
-              },
-              "events": {
-                "ondblclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ],
-                "onclick": [
-                  {
-                    "action": "",
-                    "params": ""
-                  }
-                ]
-              },
-              "content": "          <p>Our solutions make production faster and cheaper. Contact us for more information.<span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.</span><span style=\"color:rgb(18, 19, 43); font-family:Montserrat, sans-serif; font-size:15px; font-style:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(95, 242, 131); display:inline !important; float:none\">Our solutions make production faster and cheaper. Contact us for more information.END</span></p>        "
+  "page_content": {
+    "elements": {
+      "elm_BsZ_Dg_sTTO_10V9E-AFug": {
+        "elementId": "elm_BsZ_Dg_sTTO_10V9E-AFug",
+        "elements": [
+          "elm_kmQUF3l-ly6Sze2eI55NZQ"
+        ],
+        "type": "canvas",
+        "element": {
+          "layout": {
+            "width": {
+              "unit": "%",
+              "value": "100"
+            },
+            "height": {
+              "unit": "%",
+              "value": "100"
             }
           }
-        },
-        "type": "page",
-        "sections": [
-          "elm_M-SvMxJ7RrOSrIY3nWIU7A"
-        ]
+        }
+      },
+      "elm_kmQUF3l-ly6Sze2eI55NZQ": {
+        "elementId": "elm_kmQUF3l-ly6Sze2eI55NZQ",
+        "elements": [
+          "elm_nff6tmcHOZI1c7zs_FhAwg",
+          "elm_2A3dsHtdw-xaXu2IVic_yQ",
+          "elm_xIC0SbLgMlIdL869yF7yJg"
+        ],
+        "type": "vertical_flex",
+        "element": {
+          "layout": {
+            "width": {
+              "unit": "auto",
+              "value": ""
+            },
+            "constraints": {
+              "top": {
+                "is_enabled": true,
+                "unit": "px",
+                "value": "46"
+              },
+              "left": {
+                "is_enabled": true,
+                "unit": "px",
+                "value": "44"
+              },
+              "bottom": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "right": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "position": "absolute"
+            },
+            "height": {
+              "unit": "px",
+              "value": "100"
+            }
+          },
+          "data": {
+            "element_name": ""
+          },
+          "style": {
+            "corner_radius": {
+              "preset": "preset2",
+              "value": ""
+            },
+            "border": {
+              "color": "",
+              "thickness": ""
+            },
+            "padding": {
+              "unit": "px",
+              "is_even": true,
+              "value": "10"
+            },
+            "hover": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "flex": {
+                "direction": ""
+              },
+              "opacity": ""
+            },
+            "shadow": {
+              "preset": ""
+            },
+            "background": {
+              "image": {
+                "src": "",
+                "builder_src": ""
+              },
+              "color": ""
+            },
+            "flex": {
+              "align_items": "center",
+              "gap": "10",
+              "wrap": "nowrap",
+              "direction": "column"
+            },
+            "active": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "flex": {
+                "direction": ""
+              },
+              "opacity": ""
+            },
+            "opacity": "100"
+          },
+          "events": {
+            "ondblclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ],
+            "onclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ]
+          }
+        }
+      },
+      "elm_xIC0SbLgMlIdL869yF7yJg": {
+        "elementId": "elm_xIC0SbLgMlIdL869yF7yJg",
+        "type": "heading",
+        "element": {
+          "layout": {
+            "width": {
+              "unit": "px",
+              "value": "254"
+            },
+            "constraints": {
+              "top": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "left": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "bottom": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "right": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "position": ""
+            },
+            "height": {
+              "unit": "px",
+              "value": "20"
+            }
+          },
+          "data": {
+            "element_name": "heading_4"
+          },
+          "style": {
+            "corner_radius": {
+              "preset": "preset1",
+              "value": ""
+            },
+            "border": {
+              "thickness": ""
+            },
+            "padding": {
+              "unit": "px",
+              "is_even": true,
+              "value": "0"
+            },
+            "hover": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "shadow": {
+              "preset": ""
+            },
+            "background": {
+              "image": {
+                "src": "",
+                "builder_src": ""
+              },
+              "color": ""
+            },
+            "active": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "align": {
+              "horizontal": "center",
+              "vertical": "flex-start"
+            },
+            "opacity": "100",
+            "font": {
+              "color": "#12132B",
+              "size": {
+                "value": "16"
+              },
+              "weight": "400",
+              "family": "'Montserrat',sans-serif"
+            }
+          },
+          "events": {
+            "ondblclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ],
+            "onclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ]
+          },
+          "content": "         <span></span><span></span><span style=\"\">Get started in no time</span>"
+        }
+      },
+      "elm_nff6tmcHOZI1c7zs_FhAwg": {
+        "elementId": "elm_nff6tmcHOZI1c7zs_FhAwg",
+        "type": "heading",
+        "element": {
+          "layout": {
+            "width": {
+              "unit": "px",
+              "value": "127"
+            },
+            "constraints": {
+              "top": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "left": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "bottom": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "right": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              }
+            },
+            "height": {
+              "unit": "px",
+              "value": "78"
+            }
+          },
+          "data": {
+            "element_name": "heading_1"
+          },
+          "style": {
+            "corner_radius": {
+              "preset": "preset1",
+              "value": ""
+            },
+            "border": {
+              "thickness": ""
+            },
+            "padding": {
+              "unit": "px",
+              "is_even": true,
+              "value": "0"
+            },
+            "hover": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "shadow": {
+              "preset": ""
+            },
+            "background": {
+              "image": {
+                "src": "",
+                "builder_src": ""
+              },
+              "color": ""
+            },
+            "active": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "align": {
+              "horizontal": "left",
+              "vertical": "flex-start"
+            },
+            "opacity": "100",
+            "font": {
+              "color": "#12132B",
+              "size": {
+                "value": "64"
+              },
+              "weight": "400",
+              "family": "'Montserrat',sans-serif"
+            }
+          },
+          "events": {
+            "ondblclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ],
+            "onclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ]
+          },
+          "content": "                           76%"
+        }
+      },
+      "elm_2A3dsHtdw-xaXu2IVic_yQ": {
+        "elementId": "elm_2A3dsHtdw-xaXu2IVic_yQ",
+        "type": "heading",
+        "element": {
+          "layout": {
+            "width": {
+              "unit": "px",
+              "value": "234"
+            },
+            "constraints": {
+              "top": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "left": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "bottom": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "right": {
+                "is_enabled": false,
+                "unit": "px",
+                "value": ""
+              },
+              "position": ""
+            },
+            "height": {
+              "unit": "px",
+              "value": "22"
+            }
+          },
+          "data": {
+            "element_name": "heading_3"
+          },
+          "style": {
+            "corner_radius": {
+              "preset": "preset1",
+              "value": ""
+            },
+            "border": {
+              "thickness": ""
+            },
+            "padding": {
+              "unit": "px",
+              "is_even": true,
+              "value": "0"
+            },
+            "hover": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "shadow": {
+              "preset": ""
+            },
+            "background": {
+              "image": {
+                "src": "",
+                "builder_src": ""
+              },
+              "color": ""
+            },
+            "active": {
+              "corner_radius": {
+                "preset": "",
+                "value": ""
+              },
+              "border": {
+                "thickness": ""
+              },
+              "padding": {
+                "top": {
+                  "unit": "",
+                  "value": ""
+                },
+                "left": {
+                  "unit": "",
+                  "value": ""
+                },
+                "bottom": {
+                  "unit": "",
+                  "value": ""
+                },
+                "is_even": "",
+                "right": {
+                  "unit": "",
+                  "value": ""
+                }
+              },
+              "shadow": {
+                "preset": ""
+              },
+              "background": {
+                "image": {
+                  "src": "",
+                  "builder_src": ""
+                },
+                "color": ""
+              },
+              "align": {
+                "horizontal": "",
+                "vertical": ""
+              },
+              "opacity": "",
+              "font": {
+                "color": "",
+                "size": {
+                  "value": ""
+                },
+                "weight": "",
+                "family": ""
+              }
+            },
+            "align": {
+              "horizontal": "center",
+              "vertical": "flex-start"
+            },
+            "opacity": "100",
+            "font": {
+              "color": "#12132B",
+              "size": {
+                "value": "18"
+              },
+              "weight": "600",
+              "family": "'Montserrat',sans-serif"
+            }
+          },
+          "events": {
+            "ondblclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ],
+            "onclick": [
+              {
+                "action": "",
+                "params": ""
+              }
+            ]
+          },
+          "content": "                  <span></span><span></span><span style=\"\">Faster Implementation</span>"
+        }
       }
+    },
+    "type": "page",
+    "sections": [
+      "elm_BsZ_Dg_sTTO_10V9E-AFug"
+    ]
+  }
 }
-

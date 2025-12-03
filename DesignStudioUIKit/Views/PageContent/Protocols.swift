@@ -39,6 +39,11 @@ extension Scrollable {
         
         let widthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
         widthConstraint.isActive = true
+        widthConstraint.priority = .defaultLow
+        
+        let heightConstraint = scrollView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
+        heightConstraint.priority = .defaultLow
+        heightConstraint.isActive = true
                
     }
 }

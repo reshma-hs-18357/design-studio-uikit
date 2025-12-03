@@ -3,9 +3,7 @@ import UIKit
 class SubElementsCell: UICollectionViewCell {
     static let identifier = "SubElementsCell"
     
-    private var renderedView: UIView?
-    
-    // Keep track of active dimensional constraints
+   
     private var widthConstraint: NSLayoutConstraint?
     private var heightConstraint: NSLayoutConstraint?
     
@@ -23,24 +21,14 @@ class SubElementsCell: UICollectionViewCell {
     }
     
     private func setupCell() {
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        //contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.backgroundColor = .systemPink.withAlphaComponent(0.1)
-        
-        // 1. Pin ContentView to Cell (Crucial for self-sizing)
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: self.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+        //ConstraintSetter.fillParent(parent: self, child: contentView)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        renderedView?.removeFromSuperview()
-        renderedView = nil
-        
-        // Deactivate old constraints to prevent conflicts
+       
         widthConstraint?.isActive = false
         heightConstraint?.isActive = false
         
@@ -50,29 +38,9 @@ class SubElementsCell: UICollectionViewCell {
     }
     
     func configure(element: ElementViewModel, elementsMap: [String: ElementViewModel]) {
-        // Remove previous rendered view if exists
-        renderedView?.removeFromSuperview()
-        
-        // Render the element into the contentView
-        // We pass 'contentView' as parent, assuming renderElement adds it as subview.
         ElementRendererView.renderElement(parent: contentView, element: element, elementsMap: elementsMap)
-        
-        // Retrieve the added view
-        guard let view = contentView.subviews.last else { return }
-        self.renderedView = view
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        // 2. Pin RenderedView to ContentView
-        // This ensures the cell grows if the rendered view grows
-        NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: contentView.topAnchor),
-            view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
-        
-        // 3. Apply Layout Specific Constraints
-       // applyLayoutRules(for: element, to: view)
+        setNeedsLayout()
+        layoutIfNeeded()
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -95,7 +63,8 @@ class SubElementsCell: UICollectionViewCell {
             horizontalPriority = .required // Force width
         } else {
             // If auto, we let the content decide the width
-            targetSize = CGSize(width: 0, height: 0)
+            targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width,
+                                       height: UIView.layoutFittingCompressedSize.height)
             horizontalPriority = .fittingSizeLevel // Relax width
         }
         

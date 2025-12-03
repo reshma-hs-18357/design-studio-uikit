@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerticalView: UIView {
+class VerticalView: UIView, Scrollable {
     let element: ElementViewModel
     let elementsMap: [String: ElementViewModel]
     
@@ -31,8 +31,9 @@ class VerticalView: UIView {
         verticalBGView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         
+        makeContentScrollable(contentView: verticalStackView)
         addSubview(verticalBGView)
-        verticalBGView.addSubview(verticalStackView)
+       // addSubview(verticalStackView)
     
         verticalStackView.axis = .vertical
         verticalStackView.spacing = gap
@@ -46,7 +47,8 @@ class VerticalView: UIView {
         ViewDecorator.applyBorder(view: self, element: element)
         ViewDecorator.applyOpacity(view: self, element: element)
         
-        ConstraintSetter.fillParent(parent: self, child: verticalStackView, element: element)
+        ConstraintSetter.fillParent(parent: self, child: verticalBGView, element: element)
+        //ConstraintSetter.fillParent(parent: self, child: verticalStackView, element: element)
         setupSubElements()
     }
     

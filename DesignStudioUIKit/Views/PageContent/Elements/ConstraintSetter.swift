@@ -15,6 +15,8 @@ class ConstraintSetter {
       
         if hasTop {
             child.topAnchor.constraint(equalTo: parent.topAnchor, constant: topMargin).isActive = true
+        }else{
+            child.topAnchor.constraint(greaterThanOrEqualTo: parent.topAnchor).isActive = true
         }
         
         let hasBottom = hasBottomConstraint(element: element)
@@ -31,6 +33,8 @@ class ConstraintSetter {
         
         if hasLeading {
             child.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: leftmargin).isActive = true
+        }else {
+            child.leadingAnchor.constraint(greaterThanOrEqualTo: parent.leadingAnchor).isActive = true
         }
         
         let hasTrailing = hasTrailingConstraint(element: element)
@@ -38,6 +42,8 @@ class ConstraintSetter {
 
         if hasTrailing {
             child.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -1 * trailmargin).isActive = true
+        }else {
+            child.trailingAnchor.constraint(lessThanOrEqualTo: parent.trailingAnchor).isActive = true
         }
         
         applyHeightConstraints(parent: parent, child: child, element: element)

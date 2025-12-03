@@ -54,7 +54,6 @@ class TextView: UIImageView {
 //        }
 //        
         if element.elementDetail?.layout?.width?.unit == .auto {
-          //  textView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 //            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
 //            textViewHeightConstraint?.isActive = true
 //            calcContentSize(child: textView)

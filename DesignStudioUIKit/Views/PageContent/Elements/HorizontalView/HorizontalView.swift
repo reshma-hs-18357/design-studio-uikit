@@ -101,7 +101,7 @@ class HorizontalView: UIView {
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
