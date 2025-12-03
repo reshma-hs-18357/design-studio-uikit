@@ -39,6 +39,10 @@ class TextView: UIImageView {
         textView.bounces = false
         textView.textContainerInset =  padding
         textView.isScrollEnabled = shouldEnableScroll
+        textView.textContainerInset = .zero
+        textView.textContainer.lineFragmentPadding = 0
+//        textView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+//        textView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     
         // Apply styling
         ViewDecorator.applyBackground(imageView: self, element: element)
@@ -48,16 +52,6 @@ class TextView: UIImageView {
         ViewDecorator.applyOpacity(view: self, element: element)
                 
         ConstraintSetter.fillParent(parent: self, child: textView)
-//        if element.elementDetail?.layout?.height?.unit == .auto {
-//            textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
-//            textView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-//        }
-//        
-        if element.elementDetail?.layout?.width?.unit == .auto {
-//            textViewHeightConstraint = textView.heightAnchor.constraint(equalToConstant: 1)
-//            textViewHeightConstraint?.isActive = true
-//            calcContentSize(child: textView)
-        }
     }
     
 //    private func calcContentSize(child: UITextView)  {

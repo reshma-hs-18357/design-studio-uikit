@@ -7,7 +7,25 @@
 
 import UIKit
 
-class HorizontalView: UIView {
+class ContentHuggingCollectionView: UICollectionView {
+    
+    var overrideContentWidth: CGFloat?
+    var overrideContentHeight: CGFloat?
+
+    override var contentSize: CGSize {
+        didSet {
+            invalidateIntrinsicContentSize()
+        }
+    }
+
+    override var intrinsicContentSize: CGSize {
+        let width = overrideContentWidth ?? contentSize.width
+        let height = overrideContentHeight ?? contentSize.height
+        return CGSize(width: max(1, width), height: max(1, height))
+    }
+}
+
+class HorizontalView: ContentHuggingCollectionView {
     
     private var horizontalSubElements: [ElementViewModel] = []
     private var horizontalElement: ElementViewModel!
@@ -16,7 +34,7 @@ class HorizontalView: UIView {
     init(element: ElementViewModel, elementsMap: [String : ElementViewModel]) {
         self.horizontalElement = element
         self.allElementsMap = elementsMap
-        super.init(frame: .zero)
+        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         populateDatasource(element: element, elementsMap: elementsMap)
         setupView()
     }
@@ -36,7 +54,7 @@ class HorizontalView: UIView {
     }
     
     private lazy var autoHeight = horizontalElement.elementDetail?.layout?.height?.unit == .auto
-    private lazy var shouldWrapToNextRow: Bool = horizontalElement.elementDetail?.style?.flex?.wrap != .nowrap
+    private lazy var shouldWrapToNextRow: Bool = true
     private lazy var constantHeight: CGFloat = {
         if let heightValue = horizontalElement.elementDetail?.layout?.height?.value {
             return CGFloat(Double(heightValue) ?? 150.0)
@@ -45,7 +63,6 @@ class HorizontalView: UIView {
     }()
     
     
-    private var collectionView: UICollectionView!
     private let layout = UICollectionViewFlowLayout()
     private var maxMeasuredItemHeight: CGFloat = 44
     private var collectionViewHeightConstraint : NSLayoutConstraint?
@@ -83,42 +100,22 @@ class HorizontalView: UIView {
     private func setupView() {
         self.backgroundColor = UIColor.systemGray6
     
-        // create collection view with a temporary layout
-        let tempLayout = generateLayout()
-
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: tempLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .clear
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.alwaysBounceHorizontal = true
-        collectionView.showsHorizontalScrollIndicator = true
-        collectionView.layer.borderColor = UIColor.red.cgColor
-        collectionView.layer.borderWidth = 1
-        collectionView.register(SubElementsCell.self, forCellWithReuseIdentifier: SubElementsCell.identifier)
-
-        self.addSubview(collectionView)
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ])
-        
-        if let cvheight = collectionViewHeight() {
-            collectionViewHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: cvheight)
-            collectionViewHeightConstraint?.isActive = true
-        }else{
-            observeContentSize()
-        }
+        self.collectionViewLayout = generateLayout()
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .clear
+        self.dataSource = self
+        self.delegate = self
+        self.alwaysBounceHorizontal = true
+        self.showsHorizontalScrollIndicator = true
+        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderWidth = 1
+        self.register(SubElementsCell.self, forCellWithReuseIdentifier: SubElementsCell.identifier)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        measureMaxCellHeightAndInstallLayout()
     }
-   
+    
     private func generateLayout() -> UICollectionViewLayout {
         
         if shouldWrapToNextRow {
@@ -141,65 +138,36 @@ class HorizontalView: UIView {
             return flow
         }
         
-        return UICollectionViewCompositionalLayout { [weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-            
-            guard let self = self else { return nil }
-            
-            // 1. Item
-            let itemSize = NSCollectionLayoutSize(
-                widthDimension: .estimated(100),
-                heightDimension: .estimated(100)
-            )
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            
-            // 2. Group
-            let groupSize = NSCollectionLayoutSize(
-                widthDimension: .estimated(100),
-                heightDimension: .estimated(100)
-            )
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            
-            // 3. Section
-            let section = NSCollectionLayoutSection(group: group)
-            
-            // FIX: Use self.padding directly if it is NSDirectionalEdgeInsets
-            // (No need to create new insets if types match)
-            section.contentInsets = self.padding
-            
-            section.interGroupSpacing = self.gap
-            section.orthogonalScrollingBehavior = .continuous
-            
-            return section
-        }
+        let layoutConfig = UICollectionViewCompositionalLayoutConfiguration()
+        layoutConfig.scrollDirection = .horizontal
+        
+        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+                    guard let self = self else { return nil }
+                    
+                    // 1. Item
+                    let itemSize = NSCollectionLayoutSize(
+                        widthDimension: .estimated(10),
+                        heightDimension: .estimated(10)
+                    )
+                    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                    
+                    let groupSize = NSCollectionLayoutSize(
+                        widthDimension: .estimated(10),
+                        heightDimension: .estimated(10)
+                    )
+                    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                    
+                    // 3. Section
+                    let section = NSCollectionLayoutSection(group: group)
+                    section.contentInsets = self.padding
+                    section.interGroupSpacing = self.gap
+                
+                    return section
+                    
+                }, configuration: layoutConfig)
+                
+                return layout
     }
-
-    private var contentSizeObservation: NSKeyValueObservation?
-    private func observeContentSize() {
-            contentSizeObservation = collectionView.observe(\.contentSize, options: .new) { [weak self] (cv, change) in
-                guard let self = self else { return }
-                
-                // If explicit height is set in JSON, ignore this (logic not shown for brevity, but easy to add)
-                // Otherwise, adapt to content:
-                
-                var targetHeight = cv.contentSize.height
-                if targetHeight == 0{
-                    targetHeight = 50
-                }
-                if self.collectionViewHeightConstraint == nil {
-                    self.collectionViewHeightConstraint = self.collectionView.heightAnchor.constraint(equalToConstant: targetHeight)
-                    self.collectionViewHeightConstraint?.isActive = true
-                } else if self.collectionViewHeightConstraint?.constant != targetHeight {
-                    // Determine if the change is significant to avoid layout loops
-                    if abs((self.collectionViewHeightConstraint?.constant ?? 0) - targetHeight) > 1 {
-                        self.collectionViewHeightConstraint?.constant = targetHeight
-                        
-                        // Notify parent to update if needed
-                        self.layoutIfNeeded()
-                    }
-                }
-            }
-        }
-
 }
 
 // MARK: - DataSource
