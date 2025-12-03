@@ -28,10 +28,10 @@ class CanvasView: UIView, Scrollable {
     
     private func setupSubViews() {
         guard let subElements = element.subElements else { return }
-//        makeContentScrollable(contentView: contentWrapper)
+        makeContentScrollable(contentView: contentWrapper)
         for subElementId in subElements {
             if let subElement = elementsMap[subElementId] {
-                ElementRendererView.renderElement(parent: self, element: subElement, elementsMap: elementsMap)
+                ElementRendererView.renderElement(parent: contentWrapper, element: subElement, elementsMap: elementsMap)
             }
         }
     }

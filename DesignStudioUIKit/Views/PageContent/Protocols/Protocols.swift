@@ -15,8 +15,8 @@ extension Scrollable {
     func makeContentScrollable(contentView: UIView, padding: UIEdgeInsets = .zero) {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = UIColor.green
-        contentView.backgroundColor = UIColor.red
+//        scrollView.backgroundColor = UIColor.green
+//        contentView.backgroundColor = UIColor.red
         self.addSubview(scrollView)
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,8 +35,6 @@ extension Scrollable {
             contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -padding.bottom),
             contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor, constant: padding.left),
             contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor, constant: -padding.right),
-            contentView.heightAnchor.constraint(equalToConstant: 2000),
-            contentView.widthAnchor.constraint(equalToConstant: 500)
         ])
         
 
