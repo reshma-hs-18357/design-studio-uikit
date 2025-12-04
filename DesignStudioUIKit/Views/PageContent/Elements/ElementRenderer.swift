@@ -9,7 +9,7 @@ import UIKit
 
 struct ElementRendererView {
 
-    public static func renderElement(parent : UIView ,element: ElementViewModel, elementsMap: [String: ElementViewModel] )  {
+    public static func renderElement(parent : UIView ,element: ElementViewModel, elementsMap: [String: ElementViewModel], parentElementType: UIElementType? = nil )  {
         
         switch element.elementType {
             
@@ -41,7 +41,7 @@ struct ElementRendererView {
             }
             else{
                 parent.addSubview(rendered)
-                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element, parentElementType: parentElementType)
 
             }
             
@@ -54,7 +54,7 @@ struct ElementRendererView {
             }
             else{
                 parent.addSubview(rendered)
-                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element)
+                ConstraintSetter.applyConstraints(parent: parent, child: rendered, element: element, parentElementType: parentElementType)
             }
 
         case .heading:

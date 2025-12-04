@@ -213,12 +213,12 @@ class ImageView: UIImageView {
             aspectRatioConstraint = self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: aspectRatio)
             
          
-            aspectRatioConstraint?.priority = .defaultHigh
+            aspectRatioConstraint?.priority = UILayoutPriority(999)
             aspectRatioConstraint?.isActive = true
             
           
-            self.superview?.setNeedsLayout()
-            self.superview?.layoutIfNeeded()
+//            self.superview?.setNeedsLayout()
+//            self.superview?.layoutIfNeeded()
         }
     
     private func showLoading() {

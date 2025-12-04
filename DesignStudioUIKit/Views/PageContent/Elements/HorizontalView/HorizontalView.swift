@@ -11,10 +11,23 @@ class ContentHuggingCollectionView: UICollectionView {
     
     var overrideContentWidth: CGFloat?
     var overrideContentHeight: CGFloat?
+    var elementViewModel: ElementViewModel
 
+    init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout, elementViewModel: ElementViewModel) {
+        self.elementViewModel = elementViewModel
+        super.init(frame: frame, collectionViewLayout: layout)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override var contentSize: CGSize {
         didSet {
-            invalidateIntrinsicContentSize()
+            if oldValue != contentSize {
+              invalidateIntrinsicContentSize()
+            }
         }
     }
 
@@ -22,6 +35,39 @@ class ContentHuggingCollectionView: UICollectionView {
         let width = overrideContentWidth ?? contentSize.width
         let height = overrideContentHeight ?? contentSize.height
         return CGSize(width: max(1, width), height: max(1, height))
+    }
+    
+    func setCollectionViewFrameBasedOnLayout(){
+        let strategy = elementViewModel.layoutStrategy()
+        let parentWidth = self.bounds.width > 0 ? self.bounds.width : UIScreen.main.bounds.width
+        let parentHeight = self.bounds.height > 0 ? self.bounds.height : UIScreen.main.bounds.height
+        switch strategy{
+            
+        case .fixed(width: let width, height: let height):
+            overrideContentWidth = width
+            overrideContentHeight = height
+        case .fixedWidthAutoHeight(width: let width):
+            overrideContentWidth = width
+        case .fixedHeightAutoWidth(height: let height):
+            overrideContentHeight = height
+        case .fixedWidthPercentageHeight(width: let width, heightRatio: let heightRatio):
+            overrideContentWidth = width
+            overrideContentHeight = parentHeight * heightRatio
+        case .fixedHeightPercentageWidth(widthRatio: let widthRatio, height: let height):
+            overrideContentWidth = parentWidth * widthRatio
+            overrideContentHeight = height
+        case .percentageWidthAutoHeight(widthRatio: let widthRatio):
+            overrideContentWidth = parentWidth * widthRatio
+        case .percentageHeightAutoWidth(heightRatio: let heightRatio):
+            overrideContentHeight = parentHeight * heightRatio
+        case .percentage(widthRatio: let widthRatio, heightRatio: let heightRatio):
+            overrideContentWidth = parentWidth * widthRatio
+            overrideContentHeight = parentHeight * heightRatio
+        case .intrinsic:
+            overrideContentWidth = nil
+            overrideContentHeight = nil
+        }
+        invalidateIntrinsicContentSize()
     }
 }
 
@@ -34,7 +80,7 @@ class HorizontalView: ContentHuggingCollectionView {
     init(element: ElementViewModel, elementsMap: [String : ElementViewModel]) {
         self.horizontalElement = element
         self.allElementsMap = elementsMap
-        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout(), elementViewModel: element)
         populateDatasource(element: element, elementsMap: elementsMap)
         setupView()
     }
@@ -110,6 +156,7 @@ class HorizontalView: ContentHuggingCollectionView {
         self.layer.borderColor = UIColor.red.cgColor
         self.layer.borderWidth = 1
         self.register(SubElementsCell.self, forCellWithReuseIdentifier: SubElementsCell.identifier)
+        self.setCollectionViewFrameBasedOnLayout()
     }
     
     override func layoutSubviews() {
@@ -168,6 +215,13 @@ class HorizontalView: ContentHuggingCollectionView {
                 
                 return layout
     }
+    
+    func parentSize() -> CGSize{
+        let width = self.bounds.width > 0 ? self.bounds.width : UIScreen.main.bounds.width
+        let height = self.bounds.width > 0 ? self.bounds.width : UIScreen.main.bounds.width
+        
+        return CGSize(width: width, height: height)
+    }
 }
 
 // MARK: - DataSource
@@ -189,7 +243,7 @@ extension HorizontalView: UICollectionViewDataSource {
         ) as? SubElementsCell else {
             return UICollectionViewCell()
         }
-        
+        cell.hzViewDelegate = self
         let element = horizontalSubElements[indexPath.item]
         cell.configure(element: element, elementsMap: allElementsMap)
         

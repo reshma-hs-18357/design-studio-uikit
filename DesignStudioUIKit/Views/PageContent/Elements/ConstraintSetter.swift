@@ -8,7 +8,7 @@ import UIKit
 
 class ConstraintSetter {
     
-    static func applyConstraints(parent: UIView, child: UIView , element: ElementViewModel){
+    static func applyConstraints(parent: UIView, child: UIView , element: ElementViewModel, parentElementType: UIElementType? = nil){
 
         let hasTop = hasTopConstraint(element: element)
         let topMargin = topMargin(element: element)
@@ -47,9 +47,9 @@ class ConstraintSetter {
         }
         
         
-        applyHeightConstraints(parent: parent, child: child, element: element)
+        applyHeightConstraints(parent: parent, child: child, element: element, parentElementType: parentElementType)
         
-        applyWidthConstraints(parent: parent, child: child, element: element)
+        applyWidthConstraints(parent: parent, child: child, element: element, parentElementType: parentElementType)
     }
     
     private static func hasTopConstraint (element :ElementViewModel) -> Bool {
@@ -84,7 +84,7 @@ class ConstraintSetter {
         return isEnabled
     }
     
-    private static func applyHeightConstraints(parent: UIView, child: UIView, element :ElementViewModel) {
+    private static func applyHeightConstraints(parent: UIView, child: UIView, element :ElementViewModel, parentElementType: UIElementType? = nil) {
         
         guard let height = element.elementDetail?.layout?.height else {
           return
@@ -97,7 +97,10 @@ class ConstraintSetter {
         case .percent:
             print(parent.tag);
             let percentValue = Double(height.value ?? "0") ?? 0
-            let multiplier = percentValue / 100.0
+            var multiplier = percentValue / 100.0
+            if let parentElementType = parentElementType, parentElementType == .horizontalFlex{
+                multiplier = 1
+            }
             if multiplier < 1.0 {
                 child.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: CGFloat(multiplier)).isActive = true
             }
@@ -120,7 +123,7 @@ class ConstraintSetter {
         }
     }
         
-    private static func applyWidthConstraints(parent: UIView, child: UIView, element :ElementViewModel) {
+    private static func applyWidthConstraints(parent: UIView, child: UIView, element :ElementViewModel, parentElementType: UIElementType? = nil) {
         guard let width = element.elementDetail?.layout?.width else {
           return
         }
@@ -134,8 +137,10 @@ class ConstraintSetter {
             print(parent.tag);
             let padding = padding(elementModel: element)
             let percentValue = Double(width.value ?? "0") ?? 0
-            let multiplier = percentValue / 100.0
-         
+            var multiplier = percentValue / 100.0
+            if let parentElementType = parentElementType, parentElementType == .horizontalFlex{
+                multiplier = 1
+            }
             if multiplier <= 1.0 {
                 child.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: CGFloat(multiplier)).isActive = true
             }

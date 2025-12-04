@@ -39,3 +39,41 @@ struct ElementViewModel: Codable {
         case subElements = "elements"
     }
 }
+
+extension ElementViewModel {
+    func layoutStrategy() -> LayoutStrategy{
+        let elementViewModel = self
+        let height = elementViewModel.elementDetail?.layout?.height
+        let width = elementViewModel.elementDetail?.layout?.width
+        let heightUnitType = height?.unit
+        let widthUnitType = width?.unit
+        
+        let heightPercentValue = (Double(height?.value ?? "0") ?? 0) / 100.0
+        let widthPercentValue = (Double(width?.value ?? "0") ?? 0) / 100.0
+        let frameHeight = CGFloat(Double(height?.value ?? "0") ?? 0)
+        let frameWidth = CGFloat(Double(width?.value ?? "0") ?? 0)
+        
+        switch (widthUnitType,heightUnitType) {
+        case (.px, .px):
+            return .fixed(width: frameWidth, height: frameHeight)
+        case (.percent, .percent):
+            return .percentage(widthRatio: heightPercentValue, heightRatio: widthPercentValue)
+        case (.px, .percent):
+            return .fixedWidthPercentageHeight(width: frameWidth, heightRatio: heightPercentValue)
+        case (.percent, .px):
+            return .fixedHeightPercentageWidth(widthRatio: widthPercentValue, height: frameHeight)
+        case (.px, .auto):
+            return .fixedWidthAutoHeight(width: frameWidth)
+        case (.auto, .px):
+            return .fixedHeightAutoWidth(height: frameHeight)
+        case (.percent, .auto):
+            return .percentageWidthAutoHeight(widthRatio: widthPercentValue)
+        case (.auto, .percent):
+            return .percentageHeightAutoWidth(heightRatio: heightPercentValue)
+        case (.auto, .auto):
+            return .intrinsic
+        default:
+            return .intrinsic
+        }
+    }
+}
